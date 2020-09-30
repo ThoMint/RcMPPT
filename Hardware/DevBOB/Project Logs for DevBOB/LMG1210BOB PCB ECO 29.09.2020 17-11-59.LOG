@@ -1,0 +1,93 @@
+Added Component: Designator=IC1(LMG1210RVRR)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "LMG1210RVRR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/lmg1210rvrr/texas-instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.ti.com/lit/ds/symlink/lmg1210.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "LMG1210RVRR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "595-LMG1210RVRR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LMG1210RVRR?qs=r5DSvlrkXmKqI241KOY62g%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=P1(HDR1X4)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P2(HDR1X4)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P11(HDR1X11)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P22(HDR1X11)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=U1(TDSON-8)
+Added Pin To Net: NetName=NetIC1_1 Pin=IC1-1
+Added Pin To Net: NetName=NetIC1_2 Pin=IC1-2
+Added Pin To Net: NetName=NetIC1_3 Pin=IC1-3
+Added Pin To Net: NetName=NetIC1_4 Pin=IC1-4
+Added Pin To Net: NetName=NetIC1_5 Pin=IC1-5
+Added Pin To Net: NetName=NetIC1_6 Pin=IC1-6
+Added Pin To Net: NetName=NetIC1_7 Pin=IC1-7
+Added Pin To Net: NetName=NetIC1_8 Pin=IC1-8
+Added Pin To Net: NetName=NetIC1_9 Pin=IC1-9
+Added Pin To Net: NetName=NetIC1_10 Pin=IC1-10
+Added Pin To Net: NetName=NetIC1_11 Pin=IC1-11
+Added Pin To Net: NetName=NetIC1_12 Pin=IC1-12
+Added Pin To Net: NetName=NetIC1_13 Pin=IC1-13
+Added Pin To Net: NetName=NetIC1_14 Pin=IC1-14
+Added Pin To Net: NetName=NetIC1_15 Pin=IC1-15
+Added Pin To Net: NetName=NetIC1_16 Pin=IC1-16
+Added Pin To Net: NetName=NetIC1_17 Pin=IC1-17
+Added Pin To Net: NetName=NetIC1_18 Pin=IC1-18
+Added Pin To Net: NetName=NetIC1_19 Pin=IC1-19
+Added Pin To Net: NetName=NetIC1_20 Pin=IC1-20
+Added Pin To Net: NetName=NetIC1_21 Pin=IC1-21
+Added Pin To Net: NetName=NetP1_1 Pin=P1-1
+Added Pin To Net: NetName=NetP1_2 Pin=P1-2
+Added Pin To Net: NetName=NetP1_3 Pin=P1-3
+Added Pin To Net: NetName=NetP1_4 Pin=P1-4
+Added Pin To Net: NetName=NetP2_1 Pin=P2-1
+Added Pin To Net: NetName=NetP2_1 Pin=P2-2
+Added Pin To Net: NetName=NetP2_1 Pin=P2-3
+Added Pin To Net: NetName=NetP2_1 Pin=P2-4
+Added Pin To Net: NetName=NetIC1_1 Pin=P11-1
+Added Pin To Net: NetName=NetIC1_2 Pin=P11-2
+Added Pin To Net: NetName=NetIC1_3 Pin=P11-3
+Added Pin To Net: NetName=NetIC1_4 Pin=P11-4
+Added Pin To Net: NetName=NetIC1_5 Pin=P11-5
+Added Pin To Net: NetName=NetIC1_6 Pin=P11-6
+Added Pin To Net: NetName=NetIC1_7 Pin=P11-7
+Added Pin To Net: NetName=NetIC1_8 Pin=P11-8
+Added Pin To Net: NetName=NetIC1_9 Pin=P11-9
+Added Pin To Net: NetName=NetIC1_10 Pin=P11-10
+Added Pin To Net: NetName=NetIC1_11 Pin=P11-11
+Added Pin To Net: NetName=NetIC1_12 Pin=P22-1
+Added Pin To Net: NetName=NetIC1_13 Pin=P22-2
+Added Pin To Net: NetName=NetIC1_14 Pin=P22-3
+Added Pin To Net: NetName=NetIC1_15 Pin=P22-4
+Added Pin To Net: NetName=NetIC1_16 Pin=P22-5
+Added Pin To Net: NetName=NetIC1_17 Pin=P22-6
+Added Pin To Net: NetName=NetIC1_18 Pin=P22-7
+Added Pin To Net: NetName=NetIC1_19 Pin=P22-8
+Added Pin To Net: NetName=NetIC1_20 Pin=P22-9
+Added Pin To Net: NetName=NetIC1_21 Pin=P22-10
+Added Pin To Net: NetName=NetP1_1 Pin=U1-1
+Added Pin To Net: NetName=NetP1_2 Pin=U1-2
+Added Pin To Net: NetName=NetP1_3 Pin=U1-3
+Added Pin To Net: NetName=NetP1_4 Pin=U1-4
+Added Pin To Net: NetName=NetP2_1 Pin=U1-5
+Added Pin To Net: NetName=NetP2_1 Pin=U1-6
+Added Pin To Net: NetName=NetP2_1 Pin=U1-7
+Added Pin To Net: NetName=NetP2_1 Pin=U1-8
+Added Pin To Net: NetName=NetP2_1 Pin=U1-9
+Added Member To Class: ClassName=LMG1210BOB Member=Component IC1 LMG1210RVRR
+Added Member To Class: ClassName=BSC0802BOB Member=Component P1 Header 4
+Added Member To Class: ClassName=BSC0802BOB Member=Component P2 Header 4
+Added Member To Class: ClassName=LMG1210BOB Member=Component P11 Header 11
+Added Member To Class: ClassName=LMG1210BOB Member=Component P22 Header 11
+Added Member To Class: ClassName=BSC0802BOB Member=Component U1 BSC0802LS
+Added Room: Name=BSC0802BOB
+Added Room: Name=LMG1210BOB
