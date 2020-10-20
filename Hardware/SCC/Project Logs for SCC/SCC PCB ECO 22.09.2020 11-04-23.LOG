@@ -1,6 +1,0 @@
-Change Component Designator: OldDesignator=IC? NewDesignator=IC1
-Added Pin To Net: NetName=GND Pin=IC1-17
-Added Net: Name=GND
-Added Pin To Net: NetName=VCC Pin=IC1-1
-Added Net: Name=VCC
-Added Room: Name=SCC

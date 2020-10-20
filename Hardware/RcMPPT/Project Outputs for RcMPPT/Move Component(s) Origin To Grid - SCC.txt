@@ -1,0 +1,9 @@
+Move Component(s) Origin to Grid
+Filename     : C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT\SCC.PcbDoc
+Date         : 14.10.2020
+Time         : 14:16:41
+Time Elapsed : 00:00:00
+
+
+    Component IC1-LMZ36002RVQT (3965mil,3075mil) on Top Layer - Component pads are OFF grid. No action taken.
+count : 1
