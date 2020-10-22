@@ -1,0 +1,37 @@
+Removed Pin From Net: NetName=GND Pin=IC1-1
+Removed Pin From Net: NetName=GND Pin=IC1-2
+Removed Pin From Net: NetName=GND Pin=IC1-3
+Removed Pin From Net: NetName=GND Pin=IC1-4
+Removed Pin From Net: NetName=GND Pin=IC1-5
+Removed Pin From Net: NetName=GND Pin=IC1-11
+Removed Pin From Net: NetName=GND Pin=IC1-12
+Removed Pin From Net: NetName=GND Pin=R1-2
+Removed Pin From Net: NetName=GND Pin=R2-2
+Change Net Name : Old Net Name=GND New Net Name=PGND
+Added Pin To Net: NetName=AGND Pin=IC1-1
+Added Pin To Net: NetName=AGND Pin=IC1-2
+Added Pin To Net: NetName=AGND Pin=IC1-3
+Added Pin To Net: NetName=AGND Pin=IC1-4
+Added Pin To Net: NetName=AGND Pin=IC1-5
+Added Pin To Net: NetName=AGND Pin=IC1-8
+Added Pin To Net: NetName=AGND Pin=IC1-11
+Added Pin To Net: NetName=AGND Pin=IC1-12
+Added Pin To Net: NetName=AGND Pin=R1-1
+Added Pin To Net: NetName=AGND Pin=R2-2
+Added Net: Name=AGND
+Added Pin To Net: NetName=RTSEL Pin=IC1-10
+Added Net: Name=RTSEL
+Added Pin To Net: NetName=RT Pin=IC1-9
+Added Pin To Net: NetName=RT Pin=R1-2
+Added Net: Name=RT
+Added Pin To Net: NetName=VADJ Pin=IC1-24
+Added Pin To Net: NetName=VADJ Pin=R2-1
+Added Net: Name=VADJ
+Added Member To Class: ClassName=SCC Member=Component C1 CL32B106KMVNNWE
+Added Member To Class: ClassName=SCC Member=Component C2 CL32B106KMVNNWE
+Added Member To Class: ClassName=SCC Member=Component C3 CL32B106KMVNNWE
+Added Member To Class: ClassName=SCC Member=Component C4 8TPE100MAZB
+Added Member To Class: ClassName=SCC Member=Component IC1 LMZ36002RVQT
+Added Member To Class: ClassName=SCC Member=Component R1 ERJ-6ENF4992V
+Added Member To Class: ClassName=SCC Member=Component R2 RT0805BRD075K05L
+Added Room: Name=SCC

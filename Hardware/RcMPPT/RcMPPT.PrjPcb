@@ -38,7 +38,7 @@ PrefsVaultGUID=
 PrefsRevisionGUID=
 
 [Document1]
-DocumentPath=SCC.SchDoc
+DocumentPath=RcMPPT-Power_Module.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -55,7 +55,7 @@ GenerateClassCluster=0
 DocumentUniqueId=YMEUPFII
 
 [Document2]
-DocumentPath=SCC.PcbDoc
+DocumentPath=RcMPPT-SCC.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -69,9 +69,26 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=LDYBPFTT
+DocumentUniqueId=DDBBLYDD
 
 [Document3]
+DocumentPath=..\RcMPPTLib\RcMPPTLib.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=OPJGAVLZ
+
+[Document4]
 DocumentPath=..\RcMPPTLib\RcMPPTLib.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -88,8 +105,8 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=WQOWDARH
 
-[Document4]
-DocumentPath=..\RcMPPTLib\RcMPPTLib.SchLib
+[Document5]
+DocumentPath=RcMPPT-MCU.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -103,7 +120,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=OPJGAVLZ
+DocumentUniqueId=RBMEOAHV
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for RcMPPT\Design Rule Check - SCC.html
@@ -236,7 +253,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Xerox7835
+TargetPrinter=Microsoft Print to PDF
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]
@@ -1098,6 +1115,36 @@ SelectedOnly=0
 UpdateVariants=1
 UpdateToLatestRevision=1
 PartTypes=0
+ComponentLibIdentifierKind0=Any
+ComponentLibraryIdentifier0=
+ComponentDesignItemID0=8TPE100MAZB
+ComponentSymbolReference0=8TPE100MAZB
+ComponentUpdate0=1
+ComponentIsDeviceSheet0=0
+ComponentLibIdentifierKind1=Library Name And Type
+ComponentLibraryIdentifier1=RcMPPTLib.SchLib
+ComponentDesignItemID1=CL32B106KMVNNWE
+ComponentSymbolReference1=CL32B106KMVNNWE
+ComponentUpdate1=1
+ComponentIsDeviceSheet1=0
+ComponentLibIdentifierKind2=Library Name And Type
+ComponentLibraryIdentifier2=RcMPPTLib.SchLib
+ComponentDesignItemID2=ERJ-6ENF4992V
+ComponentSymbolReference2=ERJ-6ENF4992V
+ComponentUpdate2=1
+ComponentIsDeviceSheet2=0
+ComponentLibIdentifierKind3=Library Name And Type
+ComponentLibraryIdentifier3=RcMPPTLib.SchLib
+ComponentDesignItemID3=LMZ36002RVQT
+ComponentSymbolReference3=LMZ36002RVQT
+ComponentUpdate3=1
+ComponentIsDeviceSheet3=0
+ComponentLibIdentifierKind4=Library Name And Type
+ComponentLibraryIdentifier4=RcMPPTLib.SchLib
+ComponentDesignItemID4=RT0805BRD075K05L
+ComponentSymbolReference4=RT0805BRD075K05L
+ComponentUpdate4=1
+ComponentIsDeviceSheet4=0
 FullReplace=1
 UpdateDesignatorLock=1
 UpdatePartIDLock=1
@@ -1111,6 +1158,44 @@ RemoveParameters=0
 AddModels=1
 RemoveModels=1
 UpdateCurrentModels=1
+ParameterName0=Arrow Part Number
+ParameterUpdate0=1
+ParameterName1=Arrow Price/Stock
+ParameterUpdate1=1
+ParameterName2=Comment
+ParameterUpdate2=1
+ParameterName3=Component Kind
+ParameterUpdate3=1
+ParameterName4=Datasheet Link
+ParameterUpdate4=1
+ParameterName5=Description
+ParameterUpdate5=1
+ParameterName6=Height
+ParameterUpdate6=1
+ParameterName7=Library Reference
+ParameterUpdate7=1
+ParameterName8=Manufacturer_Name
+ParameterUpdate8=1
+ParameterName9=Manufacturer_Part_Number
+ParameterUpdate9=1
+ParameterName10=Mouser Part Number
+ParameterUpdate10=1
+ParameterName11=Mouser Price/Stock
+ParameterUpdate11=1
+ModelTypeGroup0=PCBLIB
+ModelTypeUpdate0=1
+ModelType0=PCBLIB
+ModelName0=CAPC3225X280N
+ModelUpdate0=1
+ModelType1=PCBLIB
+ModelName1=CAPPM3528X200N
+ModelUpdate1=1
+ModelType2=PCBLIB
+ModelName2=LMZ36002RVQR
+ModelUpdate2=1
+ModelType3=PCBLIB
+ModelName3=R0805
+ModelUpdate3=1
 
 [DatabaseUpdateOptions]
 SelectedOnly=0

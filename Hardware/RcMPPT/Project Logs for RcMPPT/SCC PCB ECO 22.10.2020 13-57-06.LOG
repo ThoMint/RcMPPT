@@ -1,0 +1,45 @@
+Removed Pin From Net: NetName=+5 Pin=C4-1
+Removed Pin From Net: NetName=PGND Pin=C4-2
+Removed Pin From Net: NetName=VADJ Pin=RS1-1
+Removed Pin From Net: NetName=AGND Pin=RS1-2
+Removed Pin From Net: NetName=RT Pin=RT1-1
+Removed Pin From Net: NetName=AGND Pin=RT1-2
+Removed Member From Class: ClassName=SCC Member=RS1
+Added Component: Designator=C4(CAPPM3528X200N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "8TPE100MAZB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/8tpe100mazb/panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://uk.rs-online.com/web/p/products/7887374"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "8TPE100MAZB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "667-8TPE100MAZB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Panasonic/8TPE100MAZB?qs=OE1iw1LrrPHKTwwfsidxgA%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=RADJ1(R0805)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.mouser.at/datasheet/2/447/PYu-RT_1-to-0.01_RoHS_L_11-1669912.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.7mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "RT0805BRD075K05L"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "603-RT0805BRD075K05L"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.at/ProductDetail/Yageo/RT0805BRD075K05L?qs=bQfrgN9vNvwObDVrZ%2FDM5w%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=RT1(R0805)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C84.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.7mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-6ENF4992V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "667-ERJ-6ENF4992V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=667-ERJ-6ENF4992V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5 Pin=C4-1
+Added Pin To Net: NetName=PGND Pin=C4-2
+Added Pin To Net: NetName=VADJ Pin=RADJ1-1
+Added Pin To Net: NetName=AGND Pin=RADJ1-2
+Added Pin To Net: NetName=RT Pin=RT1-1
+Added Pin To Net: NetName=AGND Pin=RT1-2
+Added Member To Class: ClassName=SCC Member=Component C1 10uF
+Added Member To Class: ClassName=SCC Member=Component C2 10uF
+Added Member To Class: ClassName=SCC Member=Component C3 10uF
+Added Member To Class: ClassName=SCC Member=Component RADJ1 5.05k
+Added Room: Name=SCC
