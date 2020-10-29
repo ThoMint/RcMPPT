@@ -1,0 +1,482 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">29.10.2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">19:55:38</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc" class="file"><acronym title="C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc">C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">46</td></tr>
+</table>
+</td>
+</table><a name="IDRWOHCCEW1MWJMIMVUNBOACNXKFJ1BUTZYDQSO4FYMBSFIHACUEVN"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZLGKHL2P2IVSFBDRDD4POHKKXM5KZW3Z4H121HHQUPKRI0YTJIFP">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPXGSBDM352A2GD5OZLZWJTRWXJ3MWQPNZRTNHPH5RUPNBIJZWVGP">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDX1EL02YW1DWYNKXMZWIBRTVKPMULEMS0D5HKFGJEXZGAWJYSFZWF">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">42</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDX3PUVJ2JPOPMIDQA2UIEVGLUNEL4APXNRXL1FOH0O5MQPFSYHIPC">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKDVJ4NNGPBVKETGUCR4QJ2STIHD3V3RZY4JPNQPITHRI1XIW3Z4K">Width Constraint (Min=0.089mm) (Max=2.54mm) (Preferred=0.381mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFHG2X0CCBKGOLJYVCLVDXTODHKVHGKFKASR2AJDE0DPVYCDDUIGJ">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.15mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVKLSDBM0WAM2LBZFFCETIWBSDE0UZTQS41TWKODY1W5BRFXDTSTK">Minimum Annular Ring (Minimum=0.076mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSZOPAY445VYQOSN1DWHEYAOZZBF2UVGXU5ZOPFPAFWFRGWMOUZHC">Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQTORMB05DI2BMGJABKV4KJIXNKMS3TEUSZ4ESFI1RMVFKV51PRGB">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDH2G2RHWYJZQNG15NAZ4Z5V01OMNNQ11P50XOYHORYAXBWZQDFZ">Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5AAXI2K0JYMGLHC1L0MM3YPPANQSRNMMN1W2SQLX1GV3DAM5Z2DB">Silk To Solder Mask (Clearance=0.1mm) (IsPad),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZPPG5KXAKPLZIJZWDZLSHFSJNCACOXVEF5COLIB3XLTA403EN0VB">Silk to Silk (Clearance=0.1mm) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDF1YFOO10NUPIFQWZNIQ2TGWB3P3CYDLYWXDAJWFD3E04POMIT1RI">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDK014FUFVCZ4ZPYPJ4ZHJ40XLEJBIT3DK4JHJ41LF52KZQ4XRP55G">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSKB4GCLW5IA2ED0QFQF4A1D5ALRJVNRNYKTSCMNIJY21EDRYHJ">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">46</td>
+</tr>
+</table><br><a name="IDX1EL02YW1DWYNKXMZWIBRTVKPMULEMS0D5HKFGJEXZGAWJYSFZWF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5669.764mil|Location2.X=5753.543mil|Location1.Y=1529.094mil|Location2.Y=1665.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5669.764mil|Location2.X=5753.543mil|Location1.Y=1529.094mil|Location2.Y=1665.098mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad MCU1-32(52.772mm,16.106mm) on Top Layer [Unplated] And Pad C11-1(54.14mm,14.224mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5646.457mil|Location2.X=5690.551mil|Location1.Y=1529.094mil|Location2.Y=1665.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5646.457mil|Location2.X=5690.551mil|Location1.Y=1529.094mil|Location2.Y=1665.098mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad MCU1-31(52.272mm,16.106mm) on Top Layer [Unplated] And Pad C11-2(52.54mm,14.224mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5617.244mil|Location2.X=5690.551mil|Location1.Y=1209.37mil|Location2.Y=1590.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5617.244mil|Location2.X=5690.551mil|Location1.Y=1209.37mil|Location2.Y=1590.906mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad S1-6(51.788mm,6.168mm) on Top Layer [Unplated] And Pad C11-2(52.54mm,14.224mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5189.449mil|Location2.X=5335.098mil|Location1.Y=1559.094mil|Location2.Y=1897.402mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5189.449mil|Location2.X=5335.098mil|Location1.Y=1559.094mil|Location2.Y=1897.402mil|Absolute=True">Un-Routed Net Constraint: Net NetC12_1 Between Pad C12-1(40.932mm,14.986mm) on Top Layer [Unplated] And Pad MCU1-7(43.284mm,22.594mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5114.173mil|Location2.X=5233.543mil|Location1.Y=1171.339mil|Location2.Y=1620.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5114.173mil|Location2.X=5233.543mil|Location1.Y=1171.339mil|Location2.Y=1620.906mil|Absolute=True">Un-Routed Net Constraint: Net NetC12_1 Between Pad SW2-1(39.285mm,4.902mm) on Top Layer [Unplated] And Pad C12-1(40.932mm,14.986mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5126.457mil|Location2.X=5310.551mil|Location1.Y=1529.094mil|Location2.Y=1620.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5126.457mil|Location2.X=5310.551mil|Location1.Y=1529.094mil|Location2.Y=1620.906mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad C12-2(39.332mm,14.986mm) on Top Layer [Unplated] And Pad C8-2(42.888mm,14.224mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5108.268mil|Location2.X=5170.551mil|Location1.Y=1559.094mil|Location2.Y=1746.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5108.268mil|Location2.X=5170.551mil|Location1.Y=1559.094mil|Location2.Y=1746.732mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Via (38.735mm,18.542mm) from Top Layer to Bottom Layer And Pad C12-2(39.332mm,14.986mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5589.449mil|Location2.X=5637.087mil|Location1.Y=1432.992mil|Location2.Y=1590.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5589.449mil|Location2.X=5637.087mil|Location1.Y=1432.992mil|Location2.Y=1590.906mil|Absolute=True">Un-Routed Net Constraint: Net NetC7_1 Between Pad C7-1(51.092mm,14.224mm) on Top Layer [Unplated] And Pad L3-2(51.182mm,11.938mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5589.449mil|Location2.X=5633.543mil|Location1.Y=1529.094mil|Location2.Y=1665.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5589.449mil|Location2.X=5633.543mil|Location1.Y=1529.094mil|Location2.Y=1665.098mil|Absolute=True">Un-Routed Net Constraint: Net NetC7_1 Between Pad C7-1(51.092mm,14.224mm) on Top Layer [Unplated] And Pad MCU1-29(51.272mm,16.106mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5526.457mil|Location2.X=5587.087mil|Location1.Y=1529.094mil|Location2.Y=1665.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5526.457mil|Location2.X=5587.087mil|Location1.Y=1529.094mil|Location2.Y=1665.098mil|Absolute=True">Un-Routed Net Constraint: Net AGND Between Pad C7-2(49.492mm,14.224mm) on Top Layer [Unplated] And Pad MCU1-27(50.272mm,16.106mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5329.449mil|Location2.X=5567.008mil|Location1.Y=1432.992mil|Location2.Y=1590.906mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5329.449mil|Location2.X=5567.008mil|Location1.Y=1432.992mil|Location2.Y=1590.906mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad C8-1(44.488mm,14.224mm) on Top Layer [Unplated] And Pad L3-1(49.402mm,11.938mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5273.091mil|Location2.X=5373.543mil|Location1.Y=1529.094mil|Location2.Y=1720.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5273.091mil|Location2.X=5373.543mil|Location1.Y=1529.094mil|Location2.Y=1720.236mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad MCU1-16(43.284mm,18.094mm) on Top Layer [Unplated] And Pad C8-1(44.488mm,14.224mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5337.953mil|Location2.X=5390.236mil|Location1.Y=2054.902mil|Location2.Y=2190.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5337.953mil|Location2.X=5390.236mil|Location1.Y=2054.902mil|Location2.Y=2190.905mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad C9-1(44.704mm,29.464mm) on Top Layer [Unplated] And Pad MCU1-64(45.272mm,27.582mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5394.173mil|Location2.X=5445.039mil|Location1.Y=2054.902mil|Location2.Y=2190.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5394.173mil|Location2.X=5445.039mil|Location1.Y=2054.902mil|Location2.Y=2190.905mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad MCU1-63(45.772mm,27.582mm) on Top Layer [Unplated] And Pad C9-2(46.304mm,29.464mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4795.236mil|Location2.X=5522.756mil|Location1.Y=1025.984mil|Location2.Y=1142.126mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4795.236mil|Location2.X=5522.756mil|Location1.Y=1025.984mil|Location2.Y=1142.126mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad J1-1(30.734mm,2.135mm) on Top Layer [Unplated] And Pad S1-1(48.288mm,2.468mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4995.236mil|Location2.X=5179.134mil|Location1.Y=1157.874mil|Location2.Y=1274.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4995.236mil|Location2.X=5179.134mil|Location1.Y=1157.874mil|Location2.Y=1274.016mil|Absolute=True">Un-Routed Net Constraint: Net NetC12_1 Between Pad J1-10(35.814mm,5.485mm) on Top Layer [Unplated] And Pad SW2-1(39.285mm,4.902mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4795.236mil|Location2.X=5685.512mil|Location1.Y=1157.874mil|Location2.Y=2116.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4795.236mil|Location2.X=5685.512mil|Location1.Y=1157.874mil|Location2.Y=2116.909mil|Absolute=True">Un-Routed Net Constraint: Net NetJ1_2 Between Pad J1-2(30.734mm,5.485mm) on Top Layer [Unplated] And Pad MCU1-49(52.772mm,27.582mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4845.236mil|Location2.X=4924.764mil|Location1.Y=1025.984mil|Location2.Y=1142.126mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4845.236mil|Location2.X=4924.764mil|Location1.Y=1025.984mil|Location2.Y=1142.126mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J1-3(32.004mm,2.135mm) on Top Layer [Unplated] And Pad J1-5(33.274mm,2.135mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4845.236mil|Location2.X=5665.827mil|Location1.Y=1157.874mil|Location2.Y=2116.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4845.236mil|Location2.X=5665.827mil|Location1.Y=1157.874mil|Location2.Y=2116.909mil|Absolute=True">Un-Routed Net Constraint: Net NetJ1_4 Between Pad J1-4(32.004mm,5.485mm) on Top Layer [Unplated] And Pad MCU1-50(52.272mm,27.582mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4895.236mil|Location2.X=5024.764mil|Location1.Y=1025.984mil|Location2.Y=1142.126mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4895.236mil|Location2.X=5024.764mil|Location1.Y=1025.984mil|Location2.Y=1142.126mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J1-5(33.274mm,2.135mm) on Top Layer [Unplated] And Pad J1-9(35.814mm,2.135mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4895.236mil|Location2.X=5547.717mil|Location1.Y=1157.874mil|Location2.Y=2116.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4895.236mil|Location2.X=5547.717mil|Location1.Y=1157.874mil|Location2.Y=2116.909mil|Absolute=True">Un-Routed Net Constraint: Net NetJ1_6 Between Pad J1-6(33.274mm,5.485mm) on Top Layer [Unplated] And Pad MCU1-56(49.272mm,27.582mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4995.236mil|Location2.X=5179.134mil|Location1.Y=1025.984mil|Location2.Y=1142.126mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4995.236mil|Location2.X=5179.134mil|Location1.Y=1025.984mil|Location2.Y=1142.126mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad J1-9(35.814mm,2.135mm) on Top Layer [Unplated] And Pad SW2-3(39.285mm,1.702mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5522.913mil|Location2.X=5606.772mil|Location1.Y=1432.992mil|Location2.Y=1665.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5522.913mil|Location2.X=5606.772mil|Location1.Y=1432.992mil|Location2.Y=1665.098mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad L3-1(49.402mm,11.938mm) on Top Layer [Unplated] And Pad MCU1-28(50.772mm,16.106mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5479.449mil|Location2.X=5567.008mil|Location1.Y=1209.37mil|Location2.Y=1507.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5479.449mil|Location2.X=5567.008mil|Location1.Y=1209.37mil|Location2.Y=1507.008mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad S1-4(48.288mm,6.168mm) on Top Layer [Unplated] And Pad L3-1(49.402mm,11.938mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5223.268mil|Location2.X=5335.098mil|Location1.Y=1713.268mil|Location2.Y=1746.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5223.268mil|Location2.X=5335.098mil|Location1.Y=1713.268mil|Location2.Y=1746.732mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Via (41.656mm,18.542mm) from Top Layer to Bottom Layer And Pad MCU1-15(43.284mm,18.594mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5273.091mil|Location2.X=5390.236mil|Location1.Y=1704.488mil|Location2.Y=2116.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5273.091mil|Location2.X=5390.236mil|Location1.Y=1704.488mil|Location2.Y=2116.909mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad MCU1-16(43.284mm,18.094mm) on Top Layer [Unplated] And Pad MCU1-64(45.272mm,27.582mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5571.339mil|Location2.X=6829.842mil|Location1.Y=1520.158mil|Location2.Y=1665.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5571.339mil|Location2.X=6829.842mil|Location1.Y=1520.158mil|Location2.Y=1665.098mil|Absolute=True">Un-Routed Net Constraint: Net AGND Between Pad MCU1-27(50.272mm,16.106mm) on Top Layer [Unplated] And Via (81.788mm,13.462mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5591.024mil|Location2.X=5685.512mil|Location1.Y=1603.091mil|Location2.Y=1665.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5591.024mil|Location2.X=5685.512mil|Location1.Y=1603.091mil|Location2.Y=1665.098mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad MCU1-28(50.772mm,16.106mm) on Top Layer [Unplated] And Pad MCU1-32(52.772mm,16.106mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5650.079mil|Location2.X=5956.732mil|Location1.Y=1603.091mil|Location2.Y=1665.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5650.079mil|Location2.X=5956.732mil|Location1.Y=1603.091mil|Location2.Y=1665.098mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad MCU1-31(52.272mm,16.106mm) on Top Layer [Unplated] And Via (59.436mm,15.748mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5669.764mil|Location2.X=5786.909mil|Location1.Y=1603.091mil|Location2.Y=2015.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5669.764mil|Location2.X=5786.909mil|Location1.Y=1603.091mil|Location2.Y=2015.512mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad MCU1-32(52.772mm,16.106mm) on Top Layer [Unplated] And Pad MCU1-48(54.76mm,25.594mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5394.173mil|Location2.X=5786.909mil|Location1.Y=1980.079mil|Location2.Y=2116.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5394.173mil|Location2.X=5786.909mil|Location1.Y=1980.079mil|Location2.Y=2116.909mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad MCU1-63(45.772mm,27.582mm) on Top Layer [Unplated] And Pad MCU1-47(54.76mm,25.094mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5551.654mil|Location2.X=5733.268mil|Location1.Y=1400.473mil|Location2.Y=2116.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5551.654mil|Location2.X=5733.268mil|Location1.Y=1400.473mil|Location2.Y=2116.909mil|Absolute=True">Un-Routed Net Constraint: Net NetMCU1_55 Between Pad MCU1-55(49.772mm,27.582mm) on Top Layer [Unplated] And Pad R2-2(53.66mm,10.922mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5433.543mil|Location2.X=5499.528mil|Location1.Y=1331.929mil|Location2.Y=2116.909mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5433.543mil|Location2.X=5499.528mil|Location1.Y=1331.929mil|Location2.Y=2116.909mil|Absolute=True">Un-Routed Net Constraint: Net NetMCU1_61 Between Pad MCU1-61(46.772mm,27.582mm) on Top Layer [Unplated] And Pad R1-1(47.498mm,8.956mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5223.268mil|Location2.X=5409.921mil|Location1.Y=2054.902mil|Location2.Y=2126.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5223.268mil|Location2.X=5409.921mil|Location1.Y=2054.902mil|Location2.Y=2126.732mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Via (41.656mm,28.194mm) from Top Layer to Bottom Layer And Pad MCU1-63(45.772mm,27.582mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5440.472mil|Location2.X=5591.654mil|Location1.Y=1063.701mil|Location2.Y=1448.071mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5440.472mil|Location2.X=5591.654mil|Location1.Y=1063.701mil|Location2.Y=1448.071mil|Absolute=True">Un-Routed Net Constraint: Net NetR1_2 Between Pad R1-2(47.498mm,10.856mm) on Top Layer [Unplated] And Pad S1-2(50.038mm,2.468mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5548.346mil|Location2.X=5808.071mil|Location1.Y=1209.37mil|Location2.Y=1459.527mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5548.346mil|Location2.X=5808.071mil|Location1.Y=1209.37mil|Location2.Y=1459.527mil|Absolute=True">Un-Routed Net Constraint: Net NetR2_1 Between Pad S1-5(50.038mm,6.168mm) on Top Layer [Unplated] And Pad R2-1(55.56mm,10.922mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5479.449mil|Location2.X=5522.756mil|Location1.Y=1063.701mil|Location2.Y=1276.299mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5479.449mil|Location2.X=5522.756mil|Location1.Y=1063.701mil|Location2.Y=1276.299mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad S1-1(48.288mm,2.468mm) on Top Layer [Unplated] And Pad S1-4(48.288mm,6.168mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5617.244mil|Location2.X=5660.551mil|Location1.Y=1063.701mil|Location2.Y=1276.299mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5617.244mil|Location2.X=5660.551mil|Location1.Y=1063.701mil|Location2.Y=1276.299mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad S1-3(51.788mm,2.468mm) on Top Layer [Unplated] And Pad S1-6(51.788mm,6.168mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5320.866mil|Location2.X=5660.551mil|Location1.Y=1045.354mil|Location2.Y=1130.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5320.866mil|Location2.X=5660.551mil|Location1.Y=1045.354mil|Location2.Y=1130.63mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad SW2-4(44.535mm,1.702mm) on Top Layer [Unplated] And Pad S1-3(51.788mm,2.468mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5114.173mil|Location2.X=5385.827mil|Location1.Y=1171.339mil|Location2.Y=1214.646mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5114.173mil|Location2.X=5385.827mil|Location1.Y=1171.339mil|Location2.Y=1214.646mil|Absolute=True">Un-Routed Net Constraint: Net NetC12_1 Between Pad SW2-1(39.285mm,4.902mm) on Top Layer [Unplated] And Pad SW2-2(44.535mm,4.902mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5114.173mil|Location2.X=5385.827mil|Location1.Y=1045.354mil|Location2.Y=1088.661mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5114.173mil|Location2.X=5385.827mil|Location1.Y=1045.354mil|Location2.Y=1088.661mil|Absolute=True">Un-Routed Net Constraint: Net PGND Between Pad SW2-3(39.285mm,1.702mm) on Top Layer [Unplated] And Pad SW2-4(44.535mm,1.702mm) on Top Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5729.134mil|Location2.X=7020mil|Location1.Y=1907.638mil|Location2.Y=2090mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5729.134mil|Location2.X=7020mil|Location1.Y=1907.638mil|Location2.Y=2090mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Track (54.76mm,25.594mm)(56.62mm,25.594mm) on Top Layer And Via (84.328mm,25.146mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID5AAXI2K0JYMGLHC1L0MM3YPPANQSRNMMN1W2SQLX1GV3DAM5Z2DB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.1mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5731.175mil|Location2.X=5734.799mil|Location1.Y=1531.178mil|Location2.Y=1534.803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5731.175mil|Location2.X=5734.799mil|Location1.Y=1531.178mil|Location2.Y=1534.803mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C11-1(54.14mm,14.224mm) on Top Layer And Text "R2" (53.162mm,12.649mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5686.77mil|Location2.X=5690.395mil|Location1.Y=1529.251mil|Location2.Y=1532.875mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5686.77mil|Location2.X=5690.395mil|Location1.Y=1529.251mil|Location2.Y=1532.875mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad C11-2(52.54mm,14.224mm) on Top Layer And Text "R2" (53.162mm,12.649mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5783.209mil|Location2.X=5786.833mil|Location1.Y=1438.194mil|Location2.Y=1441.819mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5783.209mil|Location2.X=5786.833mil|Location1.Y=1438.194mil|Location2.Y=1441.819mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Pad R2-1(55.56mm,10.922mm) on Top Layer And Text "C11" (55.5mm,10.922mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDZPPG5KXAKPLZIJZWDZLSHFSJNCACOXVEF5COLIB3XLTA403EN0VB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.1mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5792.181mil|Location2.X=5795.805mil|Location1.Y=1492.183mil|Location2.Y=1495.807mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5792.181mil|Location2.X=5795.805mil|Location1.Y=1492.183mil|Location2.Y=1495.807mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.1mm) Between Text "C11" (55.5mm,10.922mm) on Top Overlay And Text "R2" (53.162mm,12.649mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
