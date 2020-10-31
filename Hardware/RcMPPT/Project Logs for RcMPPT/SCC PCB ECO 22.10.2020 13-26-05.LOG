@@ -1,5 +1,0 @@
-Removed Pin From Net: NetName=AGND Pin=R1-1
-Removed Pin From Net: NetName=RT Pin=R1-2
-Added Pin To Net: NetName=RT Pin=R1-1
-Added Pin To Net: NetName=AGND Pin=R1-2
-Added Room: Name=SCC
