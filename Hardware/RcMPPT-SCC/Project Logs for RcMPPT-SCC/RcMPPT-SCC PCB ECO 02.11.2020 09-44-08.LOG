@@ -1,0 +1,10 @@
+Change Component Footprint: Designator=C12 Old Footprint=CAPC2012X88N New Footprint=CAPC1608X97N
+Change component parameters: Designator = "C12" ("C12"); Footprint = "CAPC2012X88N"; UniqueID = "\CUZFRJQG" ("\CUZFRJQG")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "http://www.vishay.com/docs/45226/vj31xrohsautomlcc.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.97mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "VJ0603Y104JXJAC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "77-VJ0603Y104JXJAC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=77-VJ0603Y104JXJAC"; VariantName = "[No Variations]"
