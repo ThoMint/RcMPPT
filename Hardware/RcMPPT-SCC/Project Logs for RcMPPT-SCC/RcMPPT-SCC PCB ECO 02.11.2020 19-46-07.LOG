@@ -1,0 +1,15 @@
+Added Pin To Net: NetName=NetQ1_5 Pin=Q1-6
+Added Pin To Net: NetName=NetQ1_5 Pin=Q1-7
+Added Pin To Net: NetName=NetQ1_5 Pin=Q1-8
+Added Pin To Net: NetName=NetQ1_5 Pin=Q1-9
+Added Pin To Net: NetName=NetQ2_1 Pin=Q2-2
+Added Pin To Net: NetName=NetQ2_1 Pin=Q2-3
+Added Pin To Net: NetName=NetQ1_5 Pin=Q3-2
+Added Pin To Net: NetName=NetQ1_5 Pin=Q3-3
+Added Pin To Net: NetName=NetQ2_1 Pin=Q4-6
+Added Pin To Net: NetName=NetQ2_1 Pin=Q4-7
+Added Pin To Net: NetName=NetQ2_1 Pin=Q4-8
+Added Pin To Net: NetName=NetQ2_1 Pin=Q4-9
+Added Room: Name=RcMPPT-DCDC
+Added Room: Name=RcMPPT-MCU
+Added Room: Name=RcMPPT-Power_Module
