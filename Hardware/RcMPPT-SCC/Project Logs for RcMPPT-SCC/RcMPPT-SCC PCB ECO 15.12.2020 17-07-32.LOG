@@ -1,0 +1,25 @@
+Change Component Designator: OldDesignator=C? NewDesignator=C21
+Change Component Designator: OldDesignator=C? NewDesignator=C23
+Change Component Designator: OldDesignator=C? NewDesignator=C25
+Change Component Designator: OldDesignator=D? NewDesignator=D5
+Change Component Designator: OldDesignator=D? NewDesignator=D6
+Change Component Designator: OldDesignator=IC? NewDesignator=IC8
+Change Component Designator: OldDesignator=R? NewDesignator=R7
+Change Component Designator: OldDesignator=R? NewDesignator=R8
+Change Component Designator: OldDesignator=R? NewDesignator=R9
+Change Component Designator: OldDesignator=R? NewDesignator=R10
+Change Net Name : Old Net Name=NetC?_1 New Net Name=NetC21_1
+Change Net Name : Old Net Name=NetC?_2 New Net Name=NetC23_2
+Added Pin To Net: NetName=NetC21_2 Pin=C21-2
+Added Pin To Net: NetName=NetC21_2 Pin=D5-2
+Added Pin To Net: NetName=NetC21_2 Pin=D6-1
+Added Net: Name=NetC21_2
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C23 C1608X5R1E335K080AC
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C25 C1608X5R1E335K080AC
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component D6 BAS3010A03WE6327HTSA1
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component R7 CRCW25128K20JNEG
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component R9 CRCW25128K20JNEG
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component R10 CRCW25128K20JNEG
+Added Room: Name=RcMPPT-DCDC
+Added Room: Name=RcMPPT-MCU
+Added Room: Name=RcMPPT-Power_Module

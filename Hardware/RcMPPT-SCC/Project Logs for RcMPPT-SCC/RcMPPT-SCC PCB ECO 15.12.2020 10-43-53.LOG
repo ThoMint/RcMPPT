@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=+5 Pin=C15-1
+Removed Pin From Net: NetName=+5 Pin=C16-1
+Removed Pin From Net: NetName=+5 Pin=IC6-6
+Removed Member From Class: ClassName=RcMPPT-DCDC Member=IC7
+Change Component Library : Designator=D1 Old Library=* New Library=RcMPPTLib.SchLib
+Change Component Library : Designator=D2 Old Library=* New Library=RcMPPTLib.SchLib
+Change Component Library : Designator=D3 Old Library=* New Library=RcMPPTLib.SchLib
+Change Component Library : Designator=D4 Old Library=* New Library=RcMPPTLib.SchLib
+Change Component Library : Designator=IC6 Old Library=* New Library=RcMPPTLib.SchLib
+Added Pin To Net: NetName=+5 Pin=D1-2
+Added Pin To Net: NetName=+5 Pin=IC6-5
+Added Pin To Net: NetName=NetC15_1 Pin=C15-1
+Added Pin To Net: NetName=NetC15_1 Pin=C16-1
+Added Pin To Net: NetName=NetC15_1 Pin=IC6-6
+Added Net: Name=NetC15_1
+Added Room: Name=RcMPPT-DCDC
+Added Room: Name=RcMPPT-MCU
+Added Room: Name=RcMPPT-Power_Module

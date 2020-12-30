@@ -1,0 +1,18 @@
+Added Component: Designator=L1(INDPM125125X800N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "DR127-1R0-R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/dr127-1r0-r/eaton"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.arrow.com/en/products/dr127-1r0-r/eaton"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Eaton"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "DR127-1R0-R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "704-DR127-1R0-R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Coiltronics-Eaton/DR127-1R0-R?qs=yzwxPInThYTgweNwZsVQUA%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC22_1 Pin=L1-1
+Added Pin To Net: NetName=NetC13_2 Pin=L1-2
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C21 C1608X5R1E335K080AC
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C23 C1608X5R1E335K080AC
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C25 C1608X5R1E335K080AC
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component D5 BAS3010A03WE6327HTSA1
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component D6 BAS3010A03WE6327HTSA1
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component IC8 NCP1729SN35T1G
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component L1 DR127-1R0-R

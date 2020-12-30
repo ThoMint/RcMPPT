@@ -1,0 +1,111 @@
+Removed Pin From Net: NetName=+5 Pin=C22-1
+Removed Pin From Net: NetName=PGND Pin=C22-2
+Removed Pin From Net: NetName=+5 Pin=C23-1
+Removed Pin From Net: NetName=PGND Pin=C23-2
+Removed Pin From Net: NetName=PGND Pin=C24-2
+Removed Pin From Net: NetName=PGND Pin=C25-2
+Removed Pin From Net: NetName=+5 Pin=D6-2
+Removed Pin From Net: NetName=+5 Pin=D7-2
+Removed Pin From Net: NetName=PGND Pin=IC7-1
+Removed Pin From Net: NetName=+5 Pin=IC7-2
+Removed Pin From Net: NetName=PGND Pin=IC7-4
+Removed Pin From Net: NetName=+5 Pin=IC7-5
+Removed Pin From Net: NetName=PGND Pin=IC8-1
+Removed Pin From Net: NetName=+5 Pin=IC8-2
+Removed Pin From Net: NetName=PGND Pin=IC8-4
+Removed Pin From Net: NetName=+5 Pin=IC8-5
+Removed Member From Class: ClassName=RcMPPT-DCDC Member=C21
+Removed Member From Class: ClassName=RcMPPT-DCDC Member=C23
+Removed Member From Class: ClassName=RcMPPT-DCDC Member=C25
+Removed Member From Class: ClassName=RcMPPT-DCDC Member=D5
+Removed Member From Class: ClassName=RcMPPT-DCDC Member=D6
+Removed Member From Class: ClassName=RcMPPT-DCDC Member=IC8
+Added Component: Designator=C?(CAPC1608X90N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "C1608X5R1E335K080AC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/c1608x5r1e335k080ac/tdk"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_midvoltage_en.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "C1608X5R1E335K080AC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "810-C1608X5R1E335KAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=810-C1608X5R1E335KAC"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAPC1608X90N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "C1608X5R1E335K080AC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/c1608x5r1e335k080ac/tdk"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_midvoltage_en.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "C1608X5R1E335K080AC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "810-C1608X5R1E335KAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=810-C1608X5R1E335KAC"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAPC1608X90N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "C1608X5R1E335K080AC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/c1608x5r1e335k080ac/tdk"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_midvoltage_en.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "C1608X5R1E335K080AC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "810-C1608X5R1E335KAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=810-C1608X5R1E335KAC"; VariantName = "[No Variations]"
+Added Component: Designator=D?(SOD2513X110N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "BAS3010A03WE6327HTSA1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/bas3010a03we6327htsa1/infineon-technologies-ag"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.infineon.com/dgdl/Infineon-BAS3010ASERIES-DS-v01_01-en.pdf?fileId=db3a30431ddc9372011dfbc50f231c06"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Infineon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "BAS3010A03WE6327HTSA1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "726-BAS3010A-03WE6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Infineon-Technologies/BAS3010A03WE6327HTSA1?qs=K00xGehIljtEbk1%252B2pLZ%252BQ%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=D?(SOD2513X110N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "BAS3010A03WE6327HTSA1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/bas3010a03we6327htsa1/infineon-technologies-ag"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.infineon.com/dgdl/Infineon-BAS3010ASERIES-DS-v01_01-en.pdf?fileId=db3a30431ddc9372011dfbc50f231c06"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Infineon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "BAS3010A03WE6327HTSA1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "726-BAS3010A-03WE6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Infineon-Technologies/BAS3010A03WE6327HTSA1?qs=K00xGehIljtEbk1%252B2pLZ%252BQ%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=IC?(SOT105P275X110-6N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "NCP1729SN35T1G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/ncp1729sn35t1g/on-semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.onsemi.com/pub/Collateral/NCP1729-D.PDF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "NCP1729SN35T1G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "863-NCP1729SN35T1G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/ON-Semiconductor/NCP1729SN35T1G?qs=%2FugrpAKHX8pjfXPiRUErOw%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetIC4_8 Pin=C22-1
+Added Pin To Net: NetName=NetC13_1 Pin=C24-1
+Added Pin To Net: NetName=NetC13_1 Pin=C?-1
+Added Pin To Net: NetName=NetC13_2 Pin=C?-1
+Added Pin To Net: NetName=NetIC4_8 Pin=D7-2
+Added Pin To Net: NetName=NetC13_1 Pin=D8-1
+Added Pin To Net: NetName=NetC13_1 Pin=D?-1
+Added Pin To Net: NetName=NetC13_2 Pin=D?-2
+Added Pin To Net: NetName=NetIC4_8 Pin=IC7-2
+Added Pin To Net: NetName=NetIC4_8 Pin=IC7-5
+Added Pin To Net: NetName=NetC13_2 Pin=IC?-2
+Added Pin To Net: NetName=NetC13_2 Pin=IC?-5
+Change Net Name : Old Net Name=NetIC4_8 New Net Name=NetC22_1
+Added Pin To Net: NetName=NetC22_2 Pin=C22-2
+Added Pin To Net: NetName=NetC22_2 Pin=C24-2
+Added Pin To Net: NetName=NetC22_2 Pin=IC7-1
+Added Pin To Net: NetName=NetC22_2 Pin=IC7-4
+Added Net: Name=NetC22_2
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=IC?-6
+Added Net: Name=NetC?_1
+Added Pin To Net: NetName=NetC?_2 Pin=C?-2
+Added Pin To Net: NetName=NetC?_2 Pin=C?-2
+Added Pin To Net: NetName=NetC?_2 Pin=IC?-1
+Added Pin To Net: NetName=NetC?_2 Pin=IC?-4
+Added Net: Name=NetC?_2
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C? C1608X5R1E335K080AC
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C? C1608X5R1E335K080AC
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C? C1608X5R1E335K080AC
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component D? BAS3010A03WE6327HTSA1
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component D? BAS3010A03WE6327HTSA1
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component IC? NCP1729SN35T1G
+Added Room: Name=RcMPPT-DCDC
+Added Room: Name=RcMPPT-MCU
+Added Room: Name=RcMPPT-Power_Module
