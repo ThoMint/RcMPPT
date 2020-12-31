@@ -1,0 +1,15 @@
+Change Component Library : Designator=IC6 Old Library=* New Library=RcMPPTLib.SchLib
+Change Component Library : Designator=IC7 Old Library=* New Library=RcMPPTLib.SchLib
+Added Component: Designator=D?(DIOM5226X220N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "MBRA120ET3G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/mbra120et3g/on-semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.onsemi.com/pub/Collateral/MBRA120ET3-D.PDF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "2.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "ON Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "MBRA120ET3G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "863-MBRA120ET3G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/ON-Semiconductor/MBRA120ET3G?qs=3JMERSakebpxyEF0miqDLQ%3D%3D"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component D? MBRA120ET3G
+Added Room: Name=RcMPPT-DCDC
+Added Room: Name=RcMPPT-MCU
+Added Room: Name=RcMPPT-Power_Module

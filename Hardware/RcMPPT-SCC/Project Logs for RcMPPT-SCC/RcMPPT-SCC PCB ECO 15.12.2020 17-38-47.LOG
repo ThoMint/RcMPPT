@@ -1,0 +1,31 @@
+Change Component Footprint: Designator=C13 Old Footprint=CAPC3225X280N New Footprint=CAPC1608X90N
+Change Component Footprint: Designator=C14 Old Footprint=CAPC3225X280N New Footprint=CAPC1608X90N
+Change Component Comment : Designator=C13 Old Comment=10uF New Comment=C1608X5R1E335K080AC
+Change Component Comment : Designator=C14 Old Comment=10uF New Comment=C1608X5R1E335K080AC
+Change component parameters: Designator = "C13" ("C13"); Footprint = "CAPC3225X280N"; UniqueID = "\BPXXNCUF" ("\BPXXNCUF")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "C1608X5R1E335K080AC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/c1608x5r1e335k080ac/tdk"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_midvoltage_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.9mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "TDK"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "C1608X5R1E335K080AC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "810-C1608X5R1E335KAC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=810-C1608X5R1E335KAC"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C14" ("C14"); Footprint = "CAPC3225X280N"; UniqueID = "\IXMPQOMQ" ("\IXMPQOMQ")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "C1608X5R1E335K080AC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/c1608x5r1e335k080ac/tdk"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_midvoltage_en.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.9mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "TDK"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "C1608X5R1E335K080AC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "810-C1608X5R1E335KAC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=810-C1608X5R1E335KAC"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C21 C1608X5R1E335K080AC
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C23 C1608X5R1E335K080AC
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C25 C1608X5R1E335K080AC
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component D5 BAS3010A03WE6327HTSA1
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component D6 BAS3010A03WE6327HTSA1
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component IC8 NCP1729SN35T1G
+Added Room: Name=RcMPPT-DCDC
+Added Room: Name=RcMPPT-MCU
+Added Room: Name=RcMPPT-Power_Module
