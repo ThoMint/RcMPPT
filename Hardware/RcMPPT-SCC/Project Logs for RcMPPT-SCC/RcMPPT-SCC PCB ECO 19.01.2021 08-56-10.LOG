@@ -1,0 +1,42 @@
+Removed Pin From Net: NetName=NetMCU1_33 Pin=R3-1
+Change Component Designator: OldDesignator=IC? NewDesignator=IC11
+Added Component: Designator=J9(DF13A4P125H21)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/1/DF13A-4P-1.25H(21).pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "3.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Hirose"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "DF13A-4P-1.25H(21)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "798-DF13A4P125H21"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Hirose-Connector/DF13A-4P-125H21?qs=XQjbzJWzFPXWzMShI70F0w%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3V3 Pin=IC11-1
+Added Pin To Net: NetName=PGND Pin=IC11-4
+Added Pin To Net: NetName=PGND Pin=IC11-7
+Added Pin To Net: NetName=+5 Pin=IC11-8
+Added Pin To Net: NetName=PGND Pin=J7-MP1
+Added Pin To Net: NetName=PGND Pin=J7-MP2
+Added Pin To Net: NetName=PGND Pin=J8-MP1
+Added Pin To Net: NetName=PGND Pin=J8-MP2
+Added Pin To Net: NetName=+5 Pin=J9-1
+Added Pin To Net: NetName=PGND Pin=J9-2
+Added Pin To Net: NetName=PGND Pin=J9-MP2
+Added Pin To Net: NetName=NetMCU1_33 Pin=R5-1
+Added Pin To Net: NetName=NetIC11_2 Pin=IC11-2
+Added Pin To Net: NetName=NetIC11_2 Pin=MCU1-35
+Added Net: Name=NetIC11_2
+Added Pin To Net: NetName=NetIC11_3 Pin=IC11-3
+Added Pin To Net: NetName=NetIC11_3 Pin=MCU1-34
+Added Net: Name=NetIC11_3
+Added Pin To Net: NetName=NetIC11_5 Pin=IC11-5
+Added Pin To Net: NetName=NetIC11_5 Pin=J9-4
+Added Net: Name=NetIC11_5
+Added Pin To Net: NetName=NetIC11_6 Pin=IC11-6
+Added Pin To Net: NetName=NetIC11_6 Pin=J9-3
+Added Net: Name=NetIC11_6
+Added Pin To Net: NetName=NetMCU1_26 Pin=MCU1-26
+Added Pin To Net: NetName=NetMCU1_26 Pin=R4-1
+Added Net: Name=NetMCU1_26
+Added Pin To Net: NetName=NetMCU1_30 Pin=MCU1-30
+Added Pin To Net: NetName=NetMCU1_30 Pin=R3-1
+Added Net: Name=NetMCU1_30
+Added Member To Class: ClassName=RcMPPT-IO Member=Component J9 DF13A-4P-1.25H_21_

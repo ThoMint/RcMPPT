@@ -1,0 +1,10 @@
+Added Pin To Net: NetName=AGND Pin=J4-7
+Added Pin To Net: NetName=AGND Pin=J4-8
+Added Pin To Net: NetName=PGND Pin=J4-9
+Added Pin To Net: NetName=PGND Pin=J4-10
+Added Pin To Net: NetName=NetJ4_5 Pin=J4-5
+Added Pin To Net: NetName=NetJ4_5 Pin=MCU1-22
+Added Net: Name=NetJ4_5
+Added Pin To Net: NetName=NetJ4_6 Pin=J4-6
+Added Pin To Net: NetName=NetJ4_6 Pin=MCU1-42
+Added Net: Name=NetJ4_6
