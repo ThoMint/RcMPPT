@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: RcMPPT-SCC.PcbDoc   31.10.2020  21:29:49
+NCDrill File Report For: RcMPPT-SCC.PcbDoc   28.01.2021  12:01:53
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -7,10 +7,10 @@ ASCII RoundHoles File : RcMPPT-SCC.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      18mil (0.45mm)                                            Round             60        PTH        0.00inch (0.00mm)
+T1      18mil (0.45mm)                                            Round             333       PTH        0.00inch (0.00mm)
 T2      32mil (0.8mm)                                             Round             40        PTH        0.00inch (0.00mm)
-T3      134mil (3.4mm)                                            Round             4         PTH        0.00inch (0.00mm)
+T3      134mil (3.401mm)                                          Round             4         PTH        0.00inch (0.00mm)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              104
+Totals                                                                              377
 
 Total Processing Time (hh:mm:ss) : 00:00:00

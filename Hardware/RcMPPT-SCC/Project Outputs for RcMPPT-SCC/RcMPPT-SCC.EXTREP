@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: RcMPPT-SCC.GBR   31.10.2020  21:28:01
+Gerber File Extension Report For: RcMPPT-SCC.GBR   28.01.2021  12:00:19
 ------------------------------------------------------------------------------------------
 
 
@@ -10,10 +10,11 @@ Layer Extension     Layer Description
 .GTP                Top Paste                               
 .GTS                Top Solder                              
 .GTL                Top Layer                               
-.G1                 Int1 (GND)                              
-.G2                 Int2 (PWR)                              
+.G1                 Mid Layer 1                             
+.G2                 Mid Layer 2                             
 .GBL                Bottom Layer                            
 .GBS                Bottom Solder                           
+.GBP                Bottom Paste                            
 .GBO                Bottom Overlay                          
 .GM1                Mechanical 1                            
 .GM4                Board                                   
