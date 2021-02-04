@@ -1,0 +1,11 @@
+Change Component Footprint: Designator=J12 Old Footprint=DF13A5P125H21 New Footprint=DF13A4P125H21
+Change Component Comment : Designator=J12 Old Comment=DF13A-5P-1.25H_21_ New Comment=DF13A-4P-1.25H_21_
+Change component parameters: Designator = "J12" ("J12"); Footprint = "DF13A5P125H21"; UniqueID = "\DEBOICKL" ("\DEBOICKL")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/1/DF13A-4P-1.25H(21).pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "3.6mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Hirose"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "DF13A-4P-1.25H(21)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "798-DF13A4P125H21"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Hirose-Connector/DF13A-4P-125H21?qs=XQjbzJWzFPXWzMShI70F0w%3D%3D"; VariantName = "[No Variations]"

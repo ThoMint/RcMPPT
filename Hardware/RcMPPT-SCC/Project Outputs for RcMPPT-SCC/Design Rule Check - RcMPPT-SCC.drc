@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\RcMPPT-SCC\RcMPPT-SCC.PcbDoc
-Date     : 01.02.2021
-Time     : 19:52:07
+Date     : 04.02.2021
+Time     : 17:55:48
 
 Processing Rule : Clearance Constraint (Gap=0.102mm) (All),(All)
 Rule Violations :0
@@ -18,13 +18,16 @@ Rule Violations :0
 Processing Rule : Width Constraint (Min=0.102mm) (Max=50mm) (Preferred=0.3mm) (All)
 Rule Violations :0
 
-Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (InPadClass('PowerPads'))
-Rule Violations :0
-
 Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.3mm) (Conductor Width=0.102mm) (Air Gap=0.102mm) (Entries=4) (All)
 Rule Violations :0
 
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (InPadClass('PowerPads'))
+Rule Violations :0
+
 Processing Rule : Minimum Annular Ring (Minimum=0.076mm) (All)
+Rule Violations :0
+
+Processing Rule : Acute Angle Constraint (Minimum=60.000) (All)
 Rule Violations :0
 
 Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)
@@ -54,4 +57,4 @@ Rule Violations :0
 
 Violations Detected : 0
 Waived Violations : 0
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:03
