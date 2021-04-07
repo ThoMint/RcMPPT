@@ -2,6 +2,62 @@
 FileName = RcMPPT-SCC.GBR
 AutoAperture = True
 *************************************************************
+Generating : Mechanical 15
+      File : RcMPPT-SCC.GM15
+
+    Adding Layer      : Mechanical 15
+
+
+Used DCodes :
+    D14
+    D156
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 13
+      File : RcMPPT-SCC.GM13
+
+    Adding Layer      : Mechanical 13
+
+
+Used DCodes :
+    D11
+    D14
+*************************************************************
+
+*************************************************************
+Generating : Board
+      File : RcMPPT-SCC.GM4
+
+    Adding Layer      : Board
+
+
+Used DCodes :
+    D13
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : RcMPPT-SCC.GM1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : RcMPPT-SCC.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D144
+*************************************************************
+
+*************************************************************
 Generating : Bottom Overlay
       File : RcMPPT-SCC.GBO
 
@@ -12,7 +68,50 @@ Used DCodes :
     D11
     D12
     D14
-    D138
+    D139
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : RcMPPT-SCC.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D20
+    D21
+    D45
+    D152
+    D153
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : RcMPPT-SCC.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D74
+    D80
+    D81
+    D105
+    D134
+    D135
+    D136
+    D137
+    D154
+    D155
 *************************************************************
 
 *************************************************************
@@ -168,6 +267,21 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
+Generating : Top Overlay
+      File : RcMPPT-SCC.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+*************************************************************
+
+*************************************************************
 Generating : Top Pad Master
       File : RcMPPT-SCC.GPT
 
@@ -243,6 +357,23 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
+Generating : Mid Layer 2
+      File : RcMPPT-SCC.G2
+
+    Adding Layer      : Mid Layer 2
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D139
+    D140
+    D141
+    D149
+    D150
+*************************************************************
+
+*************************************************************
 Generating : Bottom Pad Master
       File : RcMPPT-SCC.GPB
 
@@ -252,8 +383,8 @@ Generating : Bottom Pad Master
 
 
 Used DCodes :
-    D18
-    D19
+    D20
+    D21
     D45
     D148
     D149
@@ -261,101 +392,6 @@ Used DCodes :
     D151
     D152
     D153
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : RcMPPT-SCC.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D18
-    D19
-    D45
-    D138
-    D139
-    D140
-    D141
-    D143
-    D148
-    D149
-    D150
-    D151
-    D152
-    D153
-*************************************************************
-
-*************************************************************
-Generating : Top Overlay
-      File : RcMPPT-SCC.GTO
-
-    Adding Layer      : Top Overlay
-
-
-Used DCodes :
-    D10
-    D11
-    D12
-    D13
-    D14
-*************************************************************
-
-*************************************************************
-Generating : Bottom Solder
-      File : RcMPPT-SCC.GBS
-
-    Adding Layer      : Bottom Solder
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D74
-    D78
-    D79
-    D105
-    D134
-    D135
-    D136
-    D137
-    D154
-    D155
-*************************************************************
-
-*************************************************************
-Generating : Bottom Paste
-      File : RcMPPT-SCC.GBP
-
-    Adding Layer      : Bottom Paste
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D18
-    D19
-    D45
-    D152
-    D153
-*************************************************************
-
-*************************************************************
-Generating : Keep-Out Layer
-      File : RcMPPT-SCC.GKO
-
-    Adding Layer      : Keep-Out Layer
-
-
-Used DCodes :
-    D143
 *************************************************************
 
 *************************************************************
@@ -446,39 +482,6 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Mechanical 1
-      File : RcMPPT-SCC.GM1
-
-    Adding Layer      : Mechanical 1
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
-Generating : Board
-      File : RcMPPT-SCC.GM4
-
-    Adding Layer      : Board
-
-
-Used DCodes :
-    D13
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 13
-      File : RcMPPT-SCC.GM13
-
-    Adding Layer      : Mechanical 13
-
-
-Used DCodes :
-    D11
-    D14
-*************************************************************
-
-*************************************************************
 Generating : Mid Layer 1
       File : RcMPPT-SCC.G1
 
@@ -495,32 +498,28 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Mid Layer 2
-      File : RcMPPT-SCC.G2
+Generating : Bottom Layer
+      File : RcMPPT-SCC.GBL
 
-    Adding Layer      : Mid Layer 2
+    Adding Layer      : Bottom Layer
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D138
+    D20
+    D21
+    D45
     D139
     D140
+    D141
+    D142
+    D144
+    D148
     D149
     D150
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 15
-      File : RcMPPT-SCC.GM15
-
-    Adding Layer      : Mechanical 15
-
-
-Used DCodes :
-    D14
-    D156
-    D157
+    D151
+    D152
+    D153
 *************************************************************
 
