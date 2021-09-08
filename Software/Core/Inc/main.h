@@ -45,7 +45,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "moving_average.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -79,16 +79,60 @@ void Error_Handler(void);
 #define BOOT0_Pin GPIO_PIN_8
 #define BOOT0_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
+#define UPPER_DC_LIMIT_BUCK	PWM_PERIOD * 0.95
+#define LOWER_DC_LIMIT_BUCK	PWM_PERIOD * 0.05
+#define UPPER_DC_LIMIT_BOOST	PWM_PERIOD * 0.70
+#define LOWER_DC_LIMIT_BOOST	PWM_PERIOD * 0.05
+#define UPPER_DC_LIMIT_BUCKBOOST	PWM_PERIOD * 0.70
+#define LOWER_DC_LIMIT_BUCKBOOST	PWM_PERIOD * 0.05
+//Conversion States
+#define CONVERSION_STATE_SHUTDOWN	0
+#define CONVERSION_STATE_BUCK		1
+#define CONVERSION_STATE_BOOST		2
+#define CONVERSION_STATE_BUCKBOOST	3
+//Shutdown Power Conversion if any of the inputs/outputs exceed this limit [mV]
 #define OVER_VOLTAGE_PROTECTION		20000
+//BUCK-BOOST Conversion Mode Band [mV]
+#define BUCK_BOOST_BAND 			1000
+//Analog Supply Voltage [mV]
 #define VDDA						3300
-#define TARGET_VOUT					10000
-volatile uint16_t vinRawADC;
-volatile uint16_t vinRawVolt;
-volatile uint32_t Vin;
+//Input Voltage [counts] [mV] [mV]
+volatile unsigned int vinRawADC;
+volatile unsigned int vinRawVolt;
+volatile unsigned int Vin;
+volatile unsigned int VinAverage;
+FilterTypeDef VinFilter;
 
-volatile uint16_t voutRawADC;
-volatile uint16_t voutRawVolt;
-volatile uint32_t Vout;
+//Input Current [counts] [mA] [mA]
+volatile unsigned int curInRawADC;
+volatile unsigned int curInRawVolt;
+volatile unsigned int CurIn;
+volatile unsigned int CurInAverage;
+FilterTypeDef CurInFilter;
+
+//Output Voltage [counts] [mV] [mV]
+volatile unsigned int voutRawADC;
+volatile unsigned int voutRawVolt;
+volatile unsigned int Vout;
+volatile unsigned int VoutAverage;
+FilterTypeDef VoutFilter;
+
+//Output Current [counts] [mA] [mA]
+volatile unsigned int curOutRawADC;
+volatile unsigned int curOutRawVolt;
+volatile unsigned int CurOut;
+volatile unsigned int CurOutAverage;
+FilterTypeDef CurOutFilter;
+
+//Target Output Voltage [mV] (CV)
+volatile unsigned int targetVout;
+//Target Output Voltage [mA] (CC)
+volatile unsigned int targetIout;
+
+//Conversion State: Buck, Boost, Buck-Boost
+volatile uint8_t conversionState;
+volatile uint8_t prevConversionState;
+volatile unsigned int CurrentDuty;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
