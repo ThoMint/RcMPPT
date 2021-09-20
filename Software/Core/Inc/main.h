@@ -31,6 +31,7 @@ extern "C" {
 #include "stm32g4xx_hal.h"
 
 #include "stm32g4xx_ll_adc.h"
+#include "stm32g4xx_ll_crc.h"
 #include "stm32g4xx_ll_hrtim.h"
 #include "stm32g4xx_ll_bus.h"
 #include "stm32g4xx_ll_cortex.h"
@@ -46,6 +47,7 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "moving_average.h"
+#include "eeprom_emul.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

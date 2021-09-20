@@ -53,7 +53,10 @@ SPI_HandleTypeDef hspi3;
 UART_HandleTypeDef huart5;
 
 /* USER CODE BEGIN PV */
-
+uint32_t Index = 1;
+__IO uint32_t ErasingOnGoing = 0;
+uint32_t a_VarDataTab[NB_OF_VARIABLES] = {0};
+uint32_t VarValue = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -66,6 +69,7 @@ static void MX_I2C1_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_SPI3_Init(void);
 static void MX_UART5_Init(void);
+static void MX_CRC_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -114,6 +118,7 @@ int main(void)
   MX_SPI3_Init();
   MX_UART5_Init();
   MX_USB_Device_Init();
+  MX_CRC_Init();
   /* USER CODE BEGIN 2 */
 	LL_ADC_DisableDeepPowerDown(ADC1);
 	HAL_Delay(1);	//Wait before powering up the regulator
@@ -352,6 +357,35 @@ static void MX_ADC1_Init(void)
   /* USER CODE BEGIN ADC1_Init 2 */
 
   /* USER CODE END ADC1_Init 2 */
+
+}
+
+/**
+  * @brief CRC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_CRC_Init(void)
+{
+
+  /* USER CODE BEGIN CRC_Init 0 */
+
+  /* USER CODE END CRC_Init 0 */
+
+  /* Peripheral clock enable */
+  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_CRC);
+
+  /* USER CODE BEGIN CRC_Init 1 */
+
+  /* USER CODE END CRC_Init 1 */
+  LL_CRC_SetInputDataReverseMode(CRC, LL_CRC_INDATA_REVERSE_NONE);
+  LL_CRC_SetOutputDataReverseMode(CRC, LL_CRC_OUTDATA_REVERSE_NONE);
+  LL_CRC_SetPolynomialCoef(CRC, LL_CRC_DEFAULT_CRC32_POLY);
+  LL_CRC_SetPolynomialSize(CRC, LL_CRC_POLYLENGTH_32B);
+  LL_CRC_SetInitialData(CRC, LL_CRC_DEFAULT_CRC_INITVALUE);
+  /* USER CODE BEGIN CRC_Init 2 */
+
+  /* USER CODE END CRC_Init 2 */
 
 }
 
