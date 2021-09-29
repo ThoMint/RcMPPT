@@ -1,0 +1,56 @@
+Change Component Comment : Designator=IC2 Old Comment=STM32F334R8 New Comment=STM32G474RBT6
+Change Component Designator: OldDesignator=IC2 NewDesignator=MCU1
+Change component parameters: Designator = "IC2" ("MCU1"); Footprint = "QFP50P1200X1200X160-64N"; UniqueID = "\SZZYBLHF" ("\SZZYBLHF")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://www.mouser.com/datasheet/2/389/stm32g474cb-1600828.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1.6mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "STM32G474RBT6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "511-STM32G474RBT6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/STM32G474RBT6?qs=uwxL4vQweFP0uAZUZXLBhQ%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=CL1(CAPC2012X88N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/2/C0805C689C5GACTU.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.88mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Kemet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "C0805C689C5GACTU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "80-C0805C689C5G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "http://www.mouser.com/Search/ProductDetail.aspx?qs=fv3J57pV3hEGoIltx5b3yA%3d%3d"; VariantName = "[No Variations]"
+Added Component: Designator=CL2(CAPC2012X88N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/2/C0805C689C5GACTU.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.88mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Kemet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "C0805C689C5GACTU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "80-C0805C689C5G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "http://www.mouser.com/Search/ProductDetail.aspx?qs=fv3J57pV3hEGoIltx5b3yA%3d%3d"; VariantName = "[No Variations]"
+Added Component: Designator=XC1(ABM8W240000MHZ8B1UT3)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "ABM8W-24.0000MHZ-8-B1U-T3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/abm8w-24.0000mhz-8-b1u-t3/abracon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.mouser.com/datasheet/2/3/ABM8W-1107617.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.75mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "ABRACON"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ABM8W-24.0000MHZ-8-B1U-T3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "815-8W24-8B1UT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=815-8W24-8B1UT"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=CL1-2
+Added Pin To Net: NetName=GND Pin=CL2-2
+Added Pin To Net: NetName=GND Pin=XC1-2
+Added Pin To Net: NetName=GND Pin=XC1-4
+Added Net: Name=GND
+Added Pin To Net: NetName=NetCL1_1 Pin=CL1-1
+Added Pin To Net: NetName=NetCL1_1 Pin=MCU1-5
+Added Pin To Net: NetName=NetCL1_1 Pin=XC1-1
+Added Net: Name=NetCL1_1
+Added Pin To Net: NetName=NetCL2_1 Pin=CL2-1
+Added Pin To Net: NetName=NetCL2_1 Pin=MCU1-6
+Added Pin To Net: NetName=NetCL2_1 Pin=XC1-3
+Added Net: Name=NetCL2_1
+Added Member To Class: ClassName=RcMPPT-MCU Member=Component CL1 6.8pF
+Added Member To Class: ClassName=RcMPPT-MCU Member=Component CL2 6.8pF
+Added Member To Class: ClassName=RcMPPT-MCU Member=Component XC1 ABM8W-24.0000MHZ-8-B1U-T3
+Added Room: Name=RcMPPT-MCU
+Added Room: Name=RcMPPT-Power_Module

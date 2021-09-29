@@ -1,0 +1,4 @@
+Record=DiagramHierarchy|SourceDocument=RcMPPT.MbsDoc|Kind=Multi-board Schematic Module|Designator=1|Source=..\RcMPPT-BMS\RcMPPT-BMS.PrjPcb
+Record=SubProject|SourceDocument=RcMPPT.MbsDoc|ProjectPath=..\RcMPPT-BMS\RcMPPT-BMS.PrjPcb
+Record=DiagramHierarchy|SourceDocument=RcMPPT.MbsDoc|Kind=Multi-board Schematic Module|Designator=2|Source=..\RcMPPT-SCC\RcMPPT-SCC.PrjPcb
+Record=SubProject|SourceDocument=RcMPPT.MbsDoc|ProjectPath=..\RcMPPT-SCC\RcMPPT-SCC.PrjPcb

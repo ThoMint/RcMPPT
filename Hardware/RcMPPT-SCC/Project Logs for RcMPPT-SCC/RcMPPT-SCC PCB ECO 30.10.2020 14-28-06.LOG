@@ -1,5 +1,0 @@
-Removed Pin From Net: NetName=PGND Pin=C6-2
-Added Pin To Net: NetName=AGND Pin=C6-2
-Added Room: Name=RcMPPT-DCDC
-Added Room: Name=RcMPPT-MCU
-Added Room: Name=RcMPPT-Power_Module

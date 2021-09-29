@@ -1,0 +1,58 @@
+Removed Pin From Net: NetName=NetIC10_1 Pin=MCU1-8
+Removed Pin From Net: NetName=NetIC9_1 Pin=MCU1-11
+Change Component Footprint: Designator=C37 Old Footprint=CAPC1608X97N New Footprint=CAPC1608X90N
+Change Component Footprint: Designator=C38 Old Footprint=CAPC1608X97N New Footprint=CAPC1608X90N
+Change Component Comment : Designator=C37 Old Comment=100nF New Comment=06033A251JAT2A
+Change Component Comment : Designator=C38 Old Comment=100nF New Comment=06033A251JAT2A
+Change component parameters: Designator = "C37" ("C37"); Footprint = "CAPC1608X97N"; UniqueID = "\YCCNNXFS" ("\YCCNNXFS")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/1/06031A100FAT2A.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.9mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "AVX"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "06033A251JAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "581-06033A251JAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=581-06033A251JAT2A"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C38" ("C38"); Footprint = "CAPC1608X97N"; UniqueID = "\VZIPDFHL" ("\VZIPDFHL")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/1/06031A100FAT2A.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.9mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "AVX"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "06033A251JAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "581-06033A251JAT2A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=581-06033A251JAT2A"; VariantName = "[No Variations]"
+Added Component: Designator=R9(RESC1608X55N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://industrial.panasonic.com/cdbs/www-data/pdf/RDO0000/AOA0000C331.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.55mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-PA3J332V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "667-ERJ-PA3J332V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Panasonic/ERJ-PA3J332V?qs=BzJM0faLVqUb4RD3AQ1dMg%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=R10(RESC1608X55N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://industrial.panasonic.com/cdbs/www-data/pdf/RDO0000/AOA0000C331.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.55mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ERJ-PA3J332V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "667-ERJ-PA3J332V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Panasonic/ERJ-PA3J332V?qs=BzJM0faLVqUb4RD3AQ1dMg%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=AGND Pin=C37-1
+Added Pin To Net: NetName=AGND Pin=C38-1
+Added Pin To Net: NetName=NetIC9_1 Pin=R9-1
+Added Pin To Net: NetName=NetIC10_1 Pin=R10-2
+Added Pin To Net: NetName=NetC37_2 Pin=C37-2
+Added Pin To Net: NetName=NetC37_2 Pin=MCU1-11
+Added Pin To Net: NetName=NetC37_2 Pin=R9-2
+Added Net: Name=NetC37_2
+Added Pin To Net: NetName=NetC38_2 Pin=C38-2
+Added Pin To Net: NetName=NetC38_2 Pin=MCU1-8
+Added Pin To Net: NetName=NetC38_2 Pin=R10-1
+Added Net: Name=NetC38_2
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C37 06033A251JAT2A
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C38 06033A251JAT2A
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component R9 3k3
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component R10 3k3

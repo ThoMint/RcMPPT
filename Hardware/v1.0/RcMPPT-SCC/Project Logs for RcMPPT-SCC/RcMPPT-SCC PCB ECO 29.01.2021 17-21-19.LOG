@@ -1,0 +1,48 @@
+Added Component: Designator=R19(RESC1608X55N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.vishay.com/docs/28705/mcx0x0xpro.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.55mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "MCT06030C1002FP500"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "594-MCT06030C1002FP5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-Beyschlag/MCT06030C1002FP500?qs=Wvg1umJc15zoHgIjwqoGHw%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=R20(RESC1608X55N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.vishay.com/docs/28705/mcx0x0xpro.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.55mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "MCT06030C1002FP500"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "594-MCT06030C1002FP5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-Beyschlag/MCT06030C1002FP500?qs=Wvg1umJc15zoHgIjwqoGHw%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=R21(RESC1608X55N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.vishay.com/docs/28705/mcx0x0xpro.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.55mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "MCT06030C1002FP500"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "594-MCT06030C1002FP5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-Beyschlag/MCT06030C1002FP500?qs=Wvg1umJc15zoHgIjwqoGHw%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=R22(RESC1608X55N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.vishay.com/docs/28705/mcx0x0xpro.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.55mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "MCT06030C1002FP500"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "594-MCT06030C1002FP5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-Beyschlag/MCT06030C1002FP500?qs=Wvg1umJc15zoHgIjwqoGHw%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3V3 Pin=R19-1
+Added Pin To Net: NetName=NetJ4_6 Pin=R19-2
+Added Pin To Net: NetName=3V3 Pin=R20-1
+Added Pin To Net: NetName=NetJ4_5 Pin=R20-2
+Added Pin To Net: NetName=3V3 Pin=R21-1
+Added Pin To Net: NetName=NetJ8_2 Pin=R21-2
+Added Pin To Net: NetName=3V3 Pin=R22-1
+Added Pin To Net: NetName=NetJ8_3 Pin=R22-2
+Added Member To Class: ClassName=RcMPPT-IO Member=Component R19 10k
+Added Member To Class: ClassName=RcMPPT-IO Member=Component R20 10k
+Added Member To Class: ClassName=RcMPPT-IO Member=Component R21 10k
+Added Member To Class: ClassName=RcMPPT-IO Member=Component R22 10k

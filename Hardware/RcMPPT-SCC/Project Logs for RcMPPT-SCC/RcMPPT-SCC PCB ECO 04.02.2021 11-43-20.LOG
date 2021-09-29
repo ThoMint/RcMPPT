@@ -1,4 +1,0 @@
-Removed Pin From Net: NetName=PGND Pin=IC10-1
-Removed Pin From Net: NetName=PGND Pin=MCU1-8
-Added Pin To Net: NetName=NetIC10_1 Pin=IC10-1
-Added Pin To Net: NetName=NetC38_2 Pin=MCU1-8

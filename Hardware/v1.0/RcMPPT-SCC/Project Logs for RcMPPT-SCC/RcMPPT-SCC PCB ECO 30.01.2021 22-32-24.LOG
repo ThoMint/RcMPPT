@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=PGND Pin=D9-1
+Removed Pin From Net: NetName=PGND Pin=D10-1
+Added Pin To Net: NetName=AGND Pin=D9-1
+Added Pin To Net: NetName=AGND Pin=D10-1
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C35 06033A251JAT2A
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C36 06033A251JAT2A

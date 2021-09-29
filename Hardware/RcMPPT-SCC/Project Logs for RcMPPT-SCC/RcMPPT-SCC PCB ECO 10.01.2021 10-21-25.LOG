@@ -1,7 +1,0 @@
-Removed Pin From Net: NetName=NetIC9_4 Pin=R11-3
-Removed Pin From Net: NetName=NetIC9_5 Pin=R11-4
-Added Pin To Net: NetName=NetIC9_5 Pin=R11-3
-Added Pin To Net: NetName=NetIC9_4 Pin=R11-4
-Added Room: Name=RcMPPT-DCDC
-Added Room: Name=RcMPPT-MCU
-Added Room: Name=RcMPPT-Power_Module

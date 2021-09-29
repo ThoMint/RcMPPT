@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=NetCL2_1 Pin=MCU1-6
+Added Room: Name=RcMPPT-MCU
+Added Room: Name=RcMPPT-Power_Module

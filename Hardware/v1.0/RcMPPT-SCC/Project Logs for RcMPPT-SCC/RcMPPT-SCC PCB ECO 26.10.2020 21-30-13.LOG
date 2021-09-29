@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=PGND Pin=CL1-2
+Added Pin To Net: NetName=PGND Pin=CL2-2
+Added Pin To Net: NetName=PGND Pin=XC1-2
+Added Pin To Net: NetName=PGND Pin=XC1-4
+Added Room: Name=RcMPPT-MCU
+Added Room: Name=RcMPPT-Power_Module

@@ -1,0 +1,27 @@
+Added Component: Designator=J11(DF13A4P125H21)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/1/DF13A-4P-1.25H(21).pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "3.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Hirose"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "DF13A-4P-1.25H(21)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "798-DF13A4P125H21"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Hirose-Connector/DF13A-4P-125H21?qs=XQjbzJWzFPXWzMShI70F0w%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=J12(DF13A7P125H21)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.hirose.com/product/download/?distributor=digikey&type=specSheet&lang=en&num=DF13A-7P-1.25H(21)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "3.75mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Hirose"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "DF13A-7P-1.25H(21)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "798-DF13A7P125H21"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Hirose-Connector/DF13A-7P-125H21?qs=XQjbzJWzFPUwUyBUPiS%2FgA%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J11-MP1
+Added Pin To Net: NetName=GND Pin=J11-MP2
+Added Pin To Net: NetName=GND Pin=J12-MP1
+Added Pin To Net: NetName=GND Pin=J12-MP2
+Added Net: Name=GND
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C27 UUX2A470MNL1GS
+Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C28 UUX2A470MNL1GS
+Added Member To Class: ClassName=RcMPPT-MCU Member=Component J11 DF13A-4P-1.25H_21_
+Added Member To Class: ClassName=RcMPPT-MCU Member=Component J12 DF13A-7P-1.25H_21_

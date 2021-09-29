@@ -1,7 +1,0 @@
-Removed Pin From Net: NetName=NetC26_1 Pin=C26-1
-Removed Pin From Net: NetName=PGND Pin=C26-2
-Removed Pin From Net: NetName=NetC28_1 Pin=C29-1
-Removed Pin From Net: NetName=PGND Pin=C29-2
-Change Net Name : Old Net Name=NetC26_1 New Net Name=NetC27_1
-Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C27 UUX2A470MNL1GS
-Added Member To Class: ClassName=RcMPPT-DCDC Member=Component C28 UUX2A470MNL1GS

@@ -1,3 +1,0 @@
-Removed Pin From Net: NetName=NetC36_2 Pin=C38-2
-Change Component Designator: OldDesignator=STM32 NewDesignator=MCU1
-Added Pin To Net: NetName=NetC38_2 Pin=C38-2

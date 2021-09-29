@@ -1,8 +1,0 @@
-Removed Pin From Net: NetName=PGND Pin=IC9-2
-Removed Pin From Net: NetName=PGND Pin=IC10-2
-Removed Pin From Net: NetName=PGND Pin=R15-1
-Removed Pin From Net: NetName=PGND Pin=R16-1
-Added Pin To Net: NetName=AGND Pin=IC9-2
-Added Pin To Net: NetName=AGND Pin=IC10-2
-Added Pin To Net: NetName=AGND Pin=R15-1
-Added Pin To Net: NetName=AGND Pin=R16-1

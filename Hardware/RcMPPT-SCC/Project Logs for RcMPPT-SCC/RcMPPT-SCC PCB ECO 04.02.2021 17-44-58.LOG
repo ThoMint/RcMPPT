@@ -1,8 +1,0 @@
-Added Pin To Net: NetName=PGND Pin=J12-1
-Added Pin To Net: NetName=3V3 Pin=J12-4
-Added Pin To Net: NetName=NetJ12_2 Pin=J12-2
-Added Pin To Net: NetName=NetJ12_2 Pin=MCU1-25
-Added Net: Name=NetJ12_2
-Added Pin To Net: NetName=NetJ12_3 Pin=J12-3
-Added Pin To Net: NetName=NetJ12_3 Pin=MCU1-44
-Added Net: Name=NetJ12_3

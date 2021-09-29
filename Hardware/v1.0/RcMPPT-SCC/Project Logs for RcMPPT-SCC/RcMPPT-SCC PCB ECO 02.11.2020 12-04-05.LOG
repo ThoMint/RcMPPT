@@ -1,0 +1,15 @@
+Added Pin To Net: NetName=NetMCU1_33 Pin=MCU1-33
+Added Pin To Net: NetName=NetMCU1_33 Pin=R3-1
+Added Net: Name=NetMCU1_33
+Added Pin To Net: NetName=NetMCU1_34 Pin=MCU1-34
+Added Pin To Net: NetName=NetMCU1_34 Pin=R4-1
+Added Net: Name=NetMCU1_34
+Added Pin To Net: NetName=NetMCU1_35 Pin=MCU1-35
+Added Pin To Net: NetName=NetMCU1_35 Pin=R5-1
+Added Net: Name=NetMCU1_35
+Added Pin To Net: NetName=NetMCU1_36 Pin=MCU1-36
+Added Pin To Net: NetName=NetMCU1_36 Pin=R6-1
+Added Net: Name=NetMCU1_36
+Added Room: Name=RcMPPT-DCDC
+Added Room: Name=RcMPPT-MCU
+Added Room: Name=RcMPPT-Power_Module

@@ -1,0 +1,26 @@
+Removed Pin From Net: NetName=VCC Pin=R11-1
+Removed Pin From Net: NetName=NetC27_1 Pin=R11-2
+Removed Pin From Net: NetName=NetIC9_5 Pin=R11-3
+Removed Pin From Net: NetName=NetIC9_4 Pin=R11-4
+Removed Pin From Net: NetName=NetC28_1 Pin=R12-1
+Removed Pin From Net: NetName=Vout Pin=R12-2
+Removed Pin From Net: NetName=NetIC10_5 Pin=R12-3
+Removed Pin From Net: NetName=NetIC10_4 Pin=R12-4
+Removed Member From Class: ClassName=RcMPPT-DCDC Member=R12
+Added Component: Designator=R11(WSK12161L000FEA)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.vishay.com/docs/30189/wsk1216.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "WSK1216L5000FEA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC28_1 Pin=R11-1
+Added Pin To Net: NetName=NetIC10_4 Pin=R11-2
+Added Pin To Net: NetName=NetIC10_5 Pin=R11-3
+Added Pin To Net: NetName=Vout Pin=R11-4
+Added Pin To Net: NetName=VCC Pin=R18-1
+Added Pin To Net: NetName=NetIC9_4 Pin=R18-2
+Added Pin To Net: NetName=NetIC9_5 Pin=R18-3
+Added Pin To Net: NetName=NetC27_1 Pin=R18-4

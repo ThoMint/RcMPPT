@@ -1,4 +1,0 @@
-Removed Pin From Net: NetName=NetJ8_3 Pin=MCU1-51
-Removed Pin From Net: NetName=NetJ8_2 Pin=MCU1-60
-Added Pin To Net: NetName=NetJ8_2 Pin=MCU1-51
-Added Pin To Net: NetName=NetJ8_3 Pin=MCU1-60

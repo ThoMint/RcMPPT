@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=NetMCU1_61 Pin=R1-2
+Removed Pin From Net: NetName=NetMCU1_55 Pin=R2-2
+Added Pin To Net: NetName=NetMCU1_55 Pin=R1-2
+Added Pin To Net: NetName=NetMCU1_61 Pin=R2-2

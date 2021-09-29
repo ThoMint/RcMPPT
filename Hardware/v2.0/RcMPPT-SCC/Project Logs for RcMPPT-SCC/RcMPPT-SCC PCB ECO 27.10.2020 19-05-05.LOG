@@ -1,0 +1,54 @@
+Added Component: Designator=IC2(SOT95P280X145-6N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "USBLC6-2SC6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/usblc6-2sc6/stmicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00050750.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.45mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "USBLC6-2SC6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "511-USBLC6-2SC6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/USBLC6-2SC6?qs=po45yt2pPpu%2FhNIlwQdTlg%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=J1(HUSSP10W40P127_2X5_635X340X420P)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://cdn.harwin.com/pdfs/M50-360R.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Harwin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "M50-3600542R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "855-M50-3600542R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Harwin/M50-3600542R?qs=DVxm2sPGGrrPu%2FxuhpV3yw%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=LED?(LEDC2012X80N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "LG R971-KN-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/lgr971-kn-1/osram-opto-semiconductors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.mouser.com/ds/2/311/LG R971 - CHIPLED 0805-318376.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "OSRAM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "LG R971-KN-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "720-LGR971-KN-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/OSRAM-Opto-Semiconductors/LG-R971-KN-1?qs=LsPilcdHE7EX1EB7GCLHxg%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=PGND Pin=IC2-2
+Added Pin To Net: NetName=+5 Pin=IC2-5
+Added Pin To Net: NetName=3V3 Pin=J1-1
+Added Pin To Net: NetName=PGND Pin=J1-3
+Added Pin To Net: NetName=PGND Pin=J1-5
+Added Pin To Net: NetName=PGND Pin=J1-9
+Added Pin To Net: NetName=NetC12_1 Pin=J1-10
+Added Pin To Net: NetName=NetJ1_2 Pin=J1-2
+Added Pin To Net: NetName=NetJ1_2 Pin=MCU1-49
+Added Net: Name=NetJ1_2
+Added Pin To Net: NetName=NetJ1_4 Pin=J1-4
+Added Pin To Net: NetName=NetJ1_4 Pin=MCU1-50
+Added Net: Name=NetJ1_4
+Added Pin To Net: NetName=NetJ1_6 Pin=J1-6
+Added Pin To Net: NetName=NetJ1_6 Pin=MCU1-56
+Added Net: Name=NetJ1_6
+Added Pin To Net: NetName=USB-D_N Pin=IC2-6
+Added Pin To Net: NetName=USB-D_N Pin=MCU1-45
+Added Net: Name=USB-D_N
+Added Pin To Net: NetName=USB-D_P Pin=IC2-4
+Added Pin To Net: NetName=USB-D_P Pin=MCU1-46
+Added Net: Name=USB-D_P
+Added Differential Pair: Name=USB-D
+Added Member To Class: ClassName=RcMPPT-MCU Member=Component IC2 USBLC6-2SC6
+Added Member To Class: ClassName=RcMPPT-MCU Member=Component J1 SWD
+Added Member To Class: ClassName=RcMPPT-MCU Member=Component LED? LG_R971-KN-1
+Added Room: Name=RcMPPT-MCU
+Added Room: Name=RcMPPT-Power_Module

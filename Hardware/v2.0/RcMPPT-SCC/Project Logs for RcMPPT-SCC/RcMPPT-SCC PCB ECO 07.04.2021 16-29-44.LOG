@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=NetC15_1 Pin=C16-1
+Removed Pin From Net: NetName=NetC13_1 Pin=C24-1
+Removed Pin From Net: NetName=NetC22_2 Pin=C24-2
+Removed Pin From Net: NetName=NetC13_1 Pin=C25-1
+Removed Pin From Net: NetName=NetC23_2 Pin=C25-2
+Removed Pin From Net: NetName=NetC18_1 Pin=D3-2
+Removed Member From Class: ClassName=RcMPPT-DCDC Member=C16
+Removed Member From Class: ClassName=RcMPPT-DCDC Member=C24
+Removed Member From Class: ClassName=RcMPPT-DCDC Member=C25
+Removed Member From Class: ClassName=RcMPPT-DCDC Member=D3
+Added Pin To Net: NetName=NetC18_1 Pin=D4-2

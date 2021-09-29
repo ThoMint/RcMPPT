@@ -1,0 +1,30 @@
+Change Component Footprint: Designator=CL1 Old Footprint=CAPC1608X87N New Footprint=CAPC1608X90N
+Change Component Footprint: Designator=CL2 Old Footprint=CAPC1608X87N New Footprint=CAPC1608X90N
+Change Component Comment : Designator=CL1 Old Comment=6.8pF New Comment=4pF
+Change Component Comment : Designator=CL2 Old Comment=6.8pF New Comment=4pF
+Change component parameters: Designator = "CL1" ("CL1"); Footprint = "CAPC1608X87N"; UniqueID = "\QKVHDAYV" ("\QKVHDAYV")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "CL10C040CB8NNNC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/cl10c040cb8nnnc/samsung-electro-mechanics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://datasheet.lcsc.com/szlcsc/Samsung-Electro-Mechanics-CL10C040CB8NNNC_C307494.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.9mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Samsung Electro-Mechanics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "CL10C040CB8NNNC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "N/A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Samsung-Electro-Mechanics/CL10C040CB8NNNC?qs=X6jEic%2FHinCXvSxHicvHqA%3D%3D"; VariantName = "[No Variations]"
+Change component parameters: Designator = "CL2" ("CL2"); Footprint = "CAPC1608X87N"; UniqueID = "\MXMIKUQE" ("\MXMIKUQE")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "CL10C040CB8NNNC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/cl10c040cb8nnnc/samsung-electro-mechanics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://datasheet.lcsc.com/szlcsc/Samsung-Electro-Mechanics-CL10C040CB8NNNC_C307494.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.9mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Samsung Electro-Mechanics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "CL10C040CB8NNNC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "N/A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Samsung-Electro-Mechanics/CL10C040CB8NNNC?qs=X6jEic%2FHinCXvSxHicvHqA%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=Y?(R38)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Crystal, Thru-Hole; 2 Leads; Body 3.1 x 8.2 mm (Dia.xH)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "R38"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=RcMPPT-MCU Member=Component Y? XTAL

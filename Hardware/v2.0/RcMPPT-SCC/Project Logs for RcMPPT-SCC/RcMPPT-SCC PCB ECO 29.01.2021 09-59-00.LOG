@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=PGND Pin=SB1-1
+Added Pin To Net: NetName=NetIC11_7 Pin=SB1-2
+Added Pin To Net: NetName=+5 Pin=SB2-1
+Added Pin To Net: NetName=NetIC11_8 Pin=SB2-2

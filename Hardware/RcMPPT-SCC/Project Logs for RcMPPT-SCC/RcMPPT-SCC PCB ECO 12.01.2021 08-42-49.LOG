@@ -1,6 +1,0 @@
-Added Pin To Net: NetName=NetJ4_1 Pin=J4-1
-Added Pin To Net: NetName=NetJ4_1 Pin=MCU1-22
-Added Net: Name=NetJ4_1
-Added Pin To Net: NetName=NetJ4_2 Pin=J4-2
-Added Pin To Net: NetName=NetJ4_2 Pin=MCU1-42
-Added Net: Name=NetJ4_2

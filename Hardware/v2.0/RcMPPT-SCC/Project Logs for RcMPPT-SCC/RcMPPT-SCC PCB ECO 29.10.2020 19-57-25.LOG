@@ -1,0 +1,5 @@
+Change Component Comment : Designator=J? Old Comment=1981584-1 New Comment=Micro-USB
+Change Component Designator: OldDesignator=J? NewDesignator=J2
+Added Member To Class: ClassName=RcMPPT-Power_Module Member=Component IC1 LMZ36002RVQT
+Added Room: Name=RcMPPT-MCU
+Added Room: Name=RcMPPT-Power_Module
