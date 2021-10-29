@@ -66,7 +66,7 @@
 /** @defgroup Exported_Configuration_Constants Exported Configuration Constants
   * @{
   */
-#define NB_OF_VARIABLES         1000U  /*!< Number of variables to handle in eeprom */
+#define NB_OF_VARIABLES         100U  /*!< Number of variables to handle in eeprom */
 
 /**
   * @}

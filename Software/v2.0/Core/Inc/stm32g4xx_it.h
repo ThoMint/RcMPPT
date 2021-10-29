@@ -28,7 +28,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stm32g4xx.h"
+#include "eeprom_emul.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -56,7 +57,10 @@ void SVC_Handler(void);
 void DebugMon_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
+void PVD_PVM_IRQHandler(void);
+void FLASH_IRQHandler(void);
 void ADC1_2_IRQHandler(void);
+void USB_HP_IRQHandler(void);
 void USB_LP_IRQHandler(void);
 void HRTIM1_TIMF_IRQHandler(void);
 /* USER CODE BEGIN EFP */

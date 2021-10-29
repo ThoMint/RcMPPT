@@ -31,13 +31,6 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>Middlewares/EEPROM_Emul/Core/eeprom_emul.c</name>
-			<type>1</type>
-			<locationURI>copy_PARENT/Middlewares/ST/EEPROM_Emul/Core/eeprom_emul.c</locationURI>
-		</link>
-	</linkedResources>
 	<variableList>
 		<variable>
 			<name>copy_PARENT</name>

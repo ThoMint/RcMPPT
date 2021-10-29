@@ -46,8 +46,10 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
 #include "moving_average.h"
 #include "eeprom_emul.h"
+#include <hostInterface.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -130,6 +132,8 @@ FilterTypeDef CurOutFilter;
 volatile unsigned int targetVout;
 //Target Output Voltage [mA] (CC)
 volatile unsigned int targetIout;
+//Target Sample Delay [us] (1/SR)
+volatile unsigned int targetSampleDelay;
 
 //Conversion State: Buck, Boost, Buck-Boost
 volatile uint8_t conversionState;
