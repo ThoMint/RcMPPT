@@ -23,6 +23,8 @@
 #define OPTYPE_TARGET_OUTPUT_CURRENT   4
 #define OPTYPE_TARGET_SAMPLE_RATE      5
 #define OPTYPE_SAMPLE_NUM_OF_CHANNELS  6
+#define OPTYPE_OUTPUT_CURRENT          7
+#define OPTYPE_INPUT_CURRENT           8
 
 // status codes
 #define OPSTATUS_OK                                 100

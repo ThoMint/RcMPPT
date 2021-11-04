@@ -13,12 +13,15 @@
  * @param  filter_struct : Data structure
  * @retval None.
  */
-void Moving_Average_Init(FilterTypeDef *filter_struct)
+void Moving_Average_Init(FilterTypeDef *filter_struct, uint32_t size)
 {
 	filter_struct->Sum = 0;
 	filter_struct->WindowPointer = 0;
+	filter_struct->WindowLength = size;
 
-	for (uint32_t i = 0; i < WindowLength; i++)
+	filter_struct->History = calloc(filter_struct->WindowLength, sizeof(uint32_t));
+
+	for (uint32_t i = 0; i < filter_struct->WindowLength; i++)
 	{
 		filter_struct->History[i] = 0;
 	}
@@ -35,7 +38,7 @@ uint32_t Moving_Average_Compute(uint32_t raw_data, FilterTypeDef *filter_struct)
 	filter_struct->Sum += raw_data;
 	filter_struct->Sum -= filter_struct->History[filter_struct->WindowPointer];
 	filter_struct->History[filter_struct->WindowPointer] = raw_data;
-	if (filter_struct->WindowPointer < WindowLength - 1)
+	if (filter_struct->WindowPointer < filter_struct->WindowLength - 1)
 	{
 		filter_struct->WindowPointer += 1;
 	}
@@ -43,6 +46,6 @@ uint32_t Moving_Average_Compute(uint32_t raw_data, FilterTypeDef *filter_struct)
 	{
 		filter_struct->WindowPointer = 0;
 	}
-	return filter_struct->Sum / WindowLength;
+	return filter_struct->Sum / filter_struct->WindowLength;
 }
 

@@ -69,11 +69,11 @@ extern PCD_HandleTypeDef hpcd_USB_FS;
 /*           Cortex-M4 Processor Interruption and Exception Handlers          */
 /******************************************************************************/
 /**
-  * @brief This function handles Non maskable interrupt.
-  */
+ * @brief This function handles Non maskable interrupt.
+ */
 void NMI_Handler(void)
 {
-  /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
+	/* USER CODE BEGIN NonMaskableInt_IRQn 0 */
 	/* Check if NMI is due to flash ECCD (error detection) */
 	if (__HAL_FLASH_GET_FLAG(FLASH_FLAG_ECCD))
 	{
@@ -114,126 +114,126 @@ void NMI_Handler(void)
 			return;
 		}
 	}
-  /* USER CODE END NonMaskableInt_IRQn 0 */
-  HAL_RCC_NMI_IRQHandler();
-  /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
+	/* USER CODE END NonMaskableInt_IRQn 0 */
+	HAL_RCC_NMI_IRQHandler();
+	/* USER CODE BEGIN NonMaskableInt_IRQn 1 */
 	while (1)
 	{
 
 	}
-  /* USER CODE END NonMaskableInt_IRQn 1 */
+	/* USER CODE END NonMaskableInt_IRQn 1 */
 }
 
 /**
-  * @brief This function handles Hard fault interrupt.
-  */
+ * @brief This function handles Hard fault interrupt.
+ */
 void HardFault_Handler(void)
 {
-  /* USER CODE BEGIN HardFault_IRQn 0 */
-  /* USER CODE END HardFault_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_HardFault_IRQn 0 */
-    /* USER CODE END W1_HardFault_IRQn 0 */
-  }
+	/* USER CODE BEGIN HardFault_IRQn 0 */
+	/* USER CODE END HardFault_IRQn 0 */
+	while (1)
+	{
+		/* USER CODE BEGIN W1_HardFault_IRQn 0 */
+		/* USER CODE END W1_HardFault_IRQn 0 */
+	}
 }
 
 /**
-  * @brief This function handles Memory management fault.
-  */
+ * @brief This function handles Memory management fault.
+ */
 void MemManage_Handler(void)
 {
-  /* USER CODE BEGIN MemoryManagement_IRQn 0 */
+	/* USER CODE BEGIN MemoryManagement_IRQn 0 */
 
-  /* USER CODE END MemoryManagement_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
-    /* USER CODE END W1_MemoryManagement_IRQn 0 */
-  }
+	/* USER CODE END MemoryManagement_IRQn 0 */
+	while (1)
+	{
+		/* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
+		/* USER CODE END W1_MemoryManagement_IRQn 0 */
+	}
 }
 
 /**
-  * @brief This function handles Prefetch fault, memory access fault.
-  */
+ * @brief This function handles Prefetch fault, memory access fault.
+ */
 void BusFault_Handler(void)
 {
-  /* USER CODE BEGIN BusFault_IRQn 0 */
+	/* USER CODE BEGIN BusFault_IRQn 0 */
 
-  /* USER CODE END BusFault_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_BusFault_IRQn 0 */
-    /* USER CODE END W1_BusFault_IRQn 0 */
-  }
+	/* USER CODE END BusFault_IRQn 0 */
+	while (1)
+	{
+		/* USER CODE BEGIN W1_BusFault_IRQn 0 */
+		/* USER CODE END W1_BusFault_IRQn 0 */
+	}
 }
 
 /**
-  * @brief This function handles Undefined instruction or illegal state.
-  */
+ * @brief This function handles Undefined instruction or illegal state.
+ */
 void UsageFault_Handler(void)
 {
-  /* USER CODE BEGIN UsageFault_IRQn 0 */
+	/* USER CODE BEGIN UsageFault_IRQn 0 */
 
-  /* USER CODE END UsageFault_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_UsageFault_IRQn 0 */
-    /* USER CODE END W1_UsageFault_IRQn 0 */
-  }
+	/* USER CODE END UsageFault_IRQn 0 */
+	while (1)
+	{
+		/* USER CODE BEGIN W1_UsageFault_IRQn 0 */
+		/* USER CODE END W1_UsageFault_IRQn 0 */
+	}
 }
 
 /**
-  * @brief This function handles System service call via SWI instruction.
-  */
+ * @brief This function handles System service call via SWI instruction.
+ */
 void SVC_Handler(void)
 {
-  /* USER CODE BEGIN SVCall_IRQn 0 */
+	/* USER CODE BEGIN SVCall_IRQn 0 */
 
-  /* USER CODE END SVCall_IRQn 0 */
-  /* USER CODE BEGIN SVCall_IRQn 1 */
+	/* USER CODE END SVCall_IRQn 0 */
+	/* USER CODE BEGIN SVCall_IRQn 1 */
 
-  /* USER CODE END SVCall_IRQn 1 */
+	/* USER CODE END SVCall_IRQn 1 */
 }
 
 /**
-  * @brief This function handles Debug monitor.
-  */
+ * @brief This function handles Debug monitor.
+ */
 void DebugMon_Handler(void)
 {
-  /* USER CODE BEGIN DebugMonitor_IRQn 0 */
+	/* USER CODE BEGIN DebugMonitor_IRQn 0 */
 
-  /* USER CODE END DebugMonitor_IRQn 0 */
-  /* USER CODE BEGIN DebugMonitor_IRQn 1 */
+	/* USER CODE END DebugMonitor_IRQn 0 */
+	/* USER CODE BEGIN DebugMonitor_IRQn 1 */
 
-  /* USER CODE END DebugMonitor_IRQn 1 */
+	/* USER CODE END DebugMonitor_IRQn 1 */
 }
 
 /**
-  * @brief This function handles Pendable request for system service.
-  */
+ * @brief This function handles Pendable request for system service.
+ */
 void PendSV_Handler(void)
 {
-  /* USER CODE BEGIN PendSV_IRQn 0 */
+	/* USER CODE BEGIN PendSV_IRQn 0 */
 
-  /* USER CODE END PendSV_IRQn 0 */
-  /* USER CODE BEGIN PendSV_IRQn 1 */
+	/* USER CODE END PendSV_IRQn 0 */
+	/* USER CODE BEGIN PendSV_IRQn 1 */
 
-  /* USER CODE END PendSV_IRQn 1 */
+	/* USER CODE END PendSV_IRQn 1 */
 }
 
 /**
-  * @brief This function handles System tick timer.
-  */
+ * @brief This function handles System tick timer.
+ */
 void SysTick_Handler(void)
 {
-  /* USER CODE BEGIN SysTick_IRQn 0 */
+	/* USER CODE BEGIN SysTick_IRQn 0 */
 
-  /* USER CODE END SysTick_IRQn 0 */
-  HAL_IncTick();
-  /* USER CODE BEGIN SysTick_IRQn 1 */
+	/* USER CODE END SysTick_IRQn 0 */
+	HAL_IncTick();
+	/* USER CODE BEGIN SysTick_IRQn 1 */
 
-  /* USER CODE END SysTick_IRQn 1 */
+	/* USER CODE END SysTick_IRQn 1 */
 }
 
 /******************************************************************************/
@@ -244,129 +244,140 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles PVD/PVM1/PVM2/PVM3/PVM4 interrupts through EXTI lines 16/38/39/40/41.
-  */
+ * @brief This function handles PVD/PVM1/PVM2/PVM3/PVM4 interrupts through EXTI lines 16/38/39/40/41.
+ */
 void PVD_PVM_IRQHandler(void)
 {
-  /* USER CODE BEGIN PVD_PVM_IRQn 0 */
+	/* USER CODE BEGIN PVD_PVM_IRQn 0 */
 	while (__HAL_PWR_GET_FLAG(PWR_FLAG_PVDO) != RESET)
 	{
 
 	}
-  /* USER CODE END PVD_PVM_IRQn 0 */
-  HAL_PWREx_PVD_PVM_IRQHandler();
-  /* USER CODE BEGIN PVD_PVM_IRQn 1 */
+	/* USER CODE END PVD_PVM_IRQn 0 */
+	HAL_PWREx_PVD_PVM_IRQHandler();
+	/* USER CODE BEGIN PVD_PVM_IRQn 1 */
 
-  /* USER CODE END PVD_PVM_IRQn 1 */
+	/* USER CODE END PVD_PVM_IRQn 1 */
 }
 
 /**
-  * @brief This function handles Flash global interrupt.
-  */
+ * @brief This function handles Flash global interrupt.
+ */
 void FLASH_IRQHandler(void)
 {
-  /* USER CODE BEGIN FLASH_IRQn 0 */
+	/* USER CODE BEGIN FLASH_IRQn 0 */
 
-  /* USER CODE END FLASH_IRQn 0 */
-  HAL_FLASH_IRQHandler();
-  /* USER CODE BEGIN FLASH_IRQn 1 */
+	/* USER CODE END FLASH_IRQn 0 */
+	HAL_FLASH_IRQHandler();
+	/* USER CODE BEGIN FLASH_IRQn 1 */
 
-  /* USER CODE END FLASH_IRQn 1 */
+	/* USER CODE END FLASH_IRQn 1 */
 }
 
 /**
-  * @brief This function handles ADC1 and ADC2 global interrupt.
-  */
+ * @brief This function handles ADC1 and ADC2 global interrupt.
+ */
 void ADC1_2_IRQHandler(void)
 {
-  /* USER CODE BEGIN ADC1_2_IRQn 0 */
+	/* USER CODE BEGIN ADC1_2_IRQn 0 */
 	LL_ADC_ClearFlag_JEOS(ADC1);
-  /* USER CODE END ADC1_2_IRQn 0 */
+	/* USER CODE END ADC1_2_IRQn 0 */
 
-  /* USER CODE BEGIN ADC1_2_IRQn 1 */
+	/* USER CODE BEGIN ADC1_2_IRQn 1 */
 	vinRawADC = LL_ADC_INJ_ReadConversionData32(ADC1, LL_ADC_INJ_RANK_1);
-	vinRawVolt = (vinRawADC * VDDA) / 0xFFF0;
-	Vin = vinRawVolt / (33.0 / 1033.0);
-	VinAverage = Moving_Average_Compute(Vin, &VinFilter);
 
 	voutRawADC = LL_ADC_INJ_ReadConversionData32(ADC1, LL_ADC_INJ_RANK_2);
-	voutRawVolt = (voutRawADC * VDDA) / 0xFFF0;
-	Vout = voutRawVolt / (33.0 / 1033.0);
-	VoutAverage = Moving_Average_Compute(Vout, &VoutFilter);
 
 	curInRawADC = LL_ADC_INJ_ReadConversionData32(ADC1, LL_ADC_INJ_RANK_3);
-	curInRawVolt = (curInRawADC * VDDA) / 0xFFF0;
-	CurIn = (curInRawVolt / 200.0) / 0.0004293;
-	CurInAverage = Moving_Average_Compute(CurIn, &CurInFilter);
 
 	curOutRawADC = LL_ADC_INJ_ReadConversionData32(ADC1, LL_ADC_INJ_RANK_4);
-	curOutRawVolt = (curOutRawADC * VDDA) / 0xFFF0;
-	CurOut = (curOutRawVolt / 200.0) / 0.0004293;
-	CurOutAverage = Moving_Average_Compute(CurOut, &CurOutFilter);
-  /* USER CODE END ADC1_2_IRQn 1 */
+	/* USER CODE END ADC1_2_IRQn 1 */
 }
 
 /**
-  * @brief This function handles USB high priority interrupt remap.
-  */
+ * @brief This function handles USB high priority interrupt remap.
+ */
 void USB_HP_IRQHandler(void)
 {
-  /* USER CODE BEGIN USB_HP_IRQn 0 */
+	/* USER CODE BEGIN USB_HP_IRQn 0 */
 
-  /* USER CODE END USB_HP_IRQn 0 */
-  HAL_PCD_IRQHandler(&hpcd_USB_FS);
-  /* USER CODE BEGIN USB_HP_IRQn 1 */
+	/* USER CODE END USB_HP_IRQn 0 */
+	HAL_PCD_IRQHandler(&hpcd_USB_FS);
+	/* USER CODE BEGIN USB_HP_IRQn 1 */
 
-  /* USER CODE END USB_HP_IRQn 1 */
+	/* USER CODE END USB_HP_IRQn 1 */
 }
 
 /**
-  * @brief This function handles USB low priority interrupt remap.
-  */
+ * @brief This function handles USB low priority interrupt remap.
+ */
 void USB_LP_IRQHandler(void)
 {
-  /* USER CODE BEGIN USB_LP_IRQn 0 */
+	/* USER CODE BEGIN USB_LP_IRQn 0 */
 
-  /* USER CODE END USB_LP_IRQn 0 */
-  HAL_PCD_IRQHandler(&hpcd_USB_FS);
-  /* USER CODE BEGIN USB_LP_IRQn 1 */
+	/* USER CODE END USB_LP_IRQn 0 */
+	HAL_PCD_IRQHandler(&hpcd_USB_FS);
+	/* USER CODE BEGIN USB_LP_IRQn 1 */
 
-  /* USER CODE END USB_LP_IRQn 1 */
+	/* USER CODE END USB_LP_IRQn 1 */
 }
 
 /**
-  * @brief This function handles HRTIM timer F global interrupt.
-  */
+ * @brief This function handles HRTIM timer F global interrupt.
+ */
 void HRTIM1_TIMF_IRQHandler(void)
 {
-  /* USER CODE BEGIN HRTIM1_TIMF_IRQn 0 */
+	/* USER CODE BEGIN HRTIM1_TIMF_IRQn 0 */
 	LL_HRTIM_ClearFlag_REP(HRTIM1, LL_HRTIM_TIMER_F);
 
-//Choose Conversion Mode
-	if (targetVout > (VinAverage + BUCK_BOOST_BAND))
+	vinRawVolt = (vinRawADC * VDDA) / 0xFFF0;
+	Vin = vinRawVolt / (33.0 / 1033.0);
+	//Vin = Vin * VIN_CORRECTION_FACTOR;
+	VinAverage = Moving_Average_Compute(Vin, &VinFilter);
+
+	voutRawVolt = (voutRawADC * VDDA) / 0xFFF0;
+	Vout = voutRawVolt / (33.0 / 1033.0);
+	//Vout = Vout * VOUT_CORRECTION_FACTOR;
+	VoutAverage = Moving_Average_Compute(Vout, &VoutFilter);
+
+	curInRawVolt = (curInRawADC * VDDA) / 0xFFF0;
+	CurIn = (curInRawVolt / 200.0) / 0.0004293;
+	//CurIn = CurIn * CURIN_CORRECTION_FACTOR;
+	CurInAverage = Moving_Average_Compute(CurIn, &CurInFilter);
+
+	curOutRawVolt = (curOutRawADC * VDDA) / 0xFFF0;
+	CurOut = (curOutRawVolt / 200.0) / 0.0004293;
+	//CurOut = CurOut * CUROUT_CORRECTION_FACTOR;
+	CurOutAverage = Moving_Average_Compute(CurOut, &CurOutFilter);
+
+	//Choose Conversion Mode
+	if (targetVout > (VinAverage + buckBoostBand))
 	{
 		conversionState = CONVERSION_STATE_BOOST;
+		buckBoostBand = BUCK_BOOST_BAND - BUCK_BOOST_BAND_HYSTERESIS;
 	}
-	else if (targetVout < (VinAverage - BUCK_BOOST_BAND))
+	else if (targetVout < (VinAverage - buckBoostBand))
 	{
 		conversionState = CONVERSION_STATE_BUCK;
+		buckBoostBand = BUCK_BOOST_BAND - BUCK_BOOST_BAND_HYSTERESIS;
 	}
-	else if (abs((int) (VinAverage - targetVout)) < BUCK_BOOST_BAND)
+	else if (abs((int) (VinAverage - targetVout)) < buckBoostBand)
 	{
 		conversionState = CONVERSION_STATE_BUCKBOOST;
+		buckBoostBand = BUCK_BOOST_BAND + BUCK_BOOST_BAND_HYSTERESIS;
 	}
 
-//Limit Operating Voltage
+	//Limit Operating Voltage
 	if (Vin >= OVER_VOLTAGE_PROTECTION || Vout >= OVER_VOLTAGE_PROTECTION)
 	{
 		conversionState = CONVERSION_STATE_SHUTDOWN;
 		CurrentDuty = 0;
 	}
 
-//if (prevConversionState != conversionState)
-//{
-//	CurrentDuty = LOWER_DC_LIMIT_BUCKBOOST;
-//}
+	//if (prevConversionState != conversionState)
+	//{
+	//	CurrentDuty = LOWER_DC_LIMIT_BUCKBOOST;
+	//}
 
 	prevConversionState = conversionState;
 
@@ -482,11 +493,11 @@ void HRTIM1_TIMF_IRQHandler(void)
 		break;
 	}
 
-  /* USER CODE END HRTIM1_TIMF_IRQn 0 */
+	/* USER CODE END HRTIM1_TIMF_IRQn 0 */
 
-  /* USER CODE BEGIN HRTIM1_TIMF_IRQn 1 */
+	/* USER CODE BEGIN HRTIM1_TIMF_IRQn 1 */
 
-  /* USER CODE END HRTIM1_TIMF_IRQn 1 */
+	/* USER CODE END HRTIM1_TIMF_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

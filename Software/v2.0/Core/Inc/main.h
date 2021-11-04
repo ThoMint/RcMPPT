@@ -97,7 +97,8 @@ void Error_Handler(void);
 //Shutdown Power Conversion if any of the inputs/outputs exceed this limit [mV]
 #define OVER_VOLTAGE_PROTECTION		20000
 //BUCK-BOOST Conversion Mode Band [mV]
-#define BUCK_BOOST_BAND 			1000
+#define BUCK_BOOST_BAND 								1200
+#define BUCK_BOOST_BAND_HYSTERESIS 			200
 //Analog Supply Voltage [mV]
 #define VDDA						3300
 //Input Voltage [counts] [mV] [mV]
@@ -106,6 +107,7 @@ volatile unsigned int vinRawVolt;
 volatile unsigned int Vin;
 volatile unsigned int VinAverage;
 FilterTypeDef VinFilter;
+#define VIN_CORRECTION_FACTOR	(19.0/18.4)
 
 //Input Current [counts] [mA] [mA]
 volatile unsigned int curInRawADC;
@@ -113,6 +115,7 @@ volatile unsigned int curInRawVolt;
 volatile unsigned int CurIn;
 volatile unsigned int CurInAverage;
 FilterTypeDef CurInFilter;
+#define CURIN_CORRECTION_FACTOR	(1.566/1.810)
 
 //Output Voltage [counts] [mV] [mV]
 volatile unsigned int voutRawADC;
@@ -120,6 +123,7 @@ volatile unsigned int voutRawVolt;
 volatile unsigned int Vout;
 volatile unsigned int VoutAverage;
 FilterTypeDef VoutFilter;
+#define VOUT_CORRECTION_FACTOR	(17.4/17.0)
 
 //Output Current [counts] [mA] [mA]
 volatile unsigned int curOutRawADC;
@@ -127,6 +131,7 @@ volatile unsigned int curOutRawVolt;
 volatile unsigned int CurOut;
 volatile unsigned int CurOutAverage;
 FilterTypeDef CurOutFilter;
+#define CUROUT_CORRECTION_FACTOR	(1.63/2.0)
 
 //Target Output Voltage [mV] (CV)
 volatile unsigned int targetVout;
@@ -134,6 +139,8 @@ volatile unsigned int targetVout;
 volatile unsigned int targetIout;
 //Target Sample Delay [us] (1/SR)
 volatile unsigned int targetSampleDelay;
+//BuckBoost Band [mV] (adaptive)
+volatile unsigned int buckBoostBand;
 
 //Conversion State: Buck, Boost, Buck-Boost
 volatile uint8_t conversionState;

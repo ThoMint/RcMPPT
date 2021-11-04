@@ -1,0 +1,20 @@
+RcMPPT Hardware Errata Sheet
+
+#1 Buck Converter Module not supplied via diode
+	The 5V Buck Converter act like a diode when supplied from the output side
+	therefore hindering the output to sink below 5V when supplied only via usb
+
+#2 Unsymmetric supply of the buck converter
+	Powerup is only possible when battery is connected
+
+#3 Low side charge pump not connected via 2 diodes
+	This shorted buck and boost side together therefore killing the gate drivers
+
+#4 Low side charge pump not cheaper / smaller than boost controller
+
+#5 SBUS not inverted
+	SBUS is implemented as inverted UART so it should be inverted on board
+
+#6 Non Bi-Directional Shunt Amplifier
+	This makes it hard to detect current flow in the wrong direction and accurate measurements
+	at low currents.
