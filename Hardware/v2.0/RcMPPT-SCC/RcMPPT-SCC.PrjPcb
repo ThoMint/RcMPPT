@@ -295,6 +295,23 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VYXONSJV
 
+[Document16]
+DocumentPath=RcMPPT-BMS-Interface.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=700
+AnnotationIndexControlEnabled=1
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=7
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=UTLSVNSG
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for RcMPPT-SCC\Design Rule Check - RcMPPT-SCC.html
 DItemRevisionGUID=
@@ -1399,7 +1416,7 @@ CompClassManualEnabled=0
 CompClassManualRoomEnabled=0
 NetClassAutoBusEnabled=1
 NetClassAutoCompEnabled=0
-NetClassAutoNamedHarnessEnabled=0
+NetClassAutoNamedHarnessEnabled=1
 NetClassManualEnabled=1
 NetClassSeparateForBusSections=0
 
