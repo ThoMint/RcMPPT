@@ -13,8 +13,8 @@ TemplateLocationPath=
 PinSwapBy_Netlabel=1
 PinSwapBy_Pin=1
 AllowPortNetNames=1
-AllowSheetEntryNetNames=1
-AppendSheetNumberToLocalNets=0
+AllowSheetEntryNetNames=0
+AppendSheetNumberToLocalNets=1
 NetlistSinglePinNets=0
 DefaultConfiguration=Sources
 UserID=0xFFFFFFFF
@@ -311,6 +311,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UTLSVNSG
+
+[Document17]
+DocumentPath=RcMPPT-SCC.PCBDwf
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
 
 [Configuration1]
 Name=Sources
