@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Thomas\Documents\GitHub\RcMPPT\Hardware\v2.0\RcMPPT-SCC\RcMPPT-SCC.PcbDoc
-Date     : 19.01.2022
-Time     : 14:52:00
+Date     : 20.01.2022
+Time     : 17:58:22
 
 Processing Rule : Clearance Constraint (Gap=0.2mm) (All),(All)
 Rule Violations :0
@@ -57,4 +57,4 @@ Rule Violations :0
 
 Violations Detected : 0
 Waived Violations : 0
-Time Elapsed        : 00:00:03
+Time Elapsed        : 00:00:02
