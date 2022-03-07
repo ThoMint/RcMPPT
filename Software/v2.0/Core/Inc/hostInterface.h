@@ -18,6 +18,6 @@
 
 void hostInterfaceProcessCommand();
 void hostInterfaceQueueDeviceCMD(DeviceCommand cmd);
-void hostInterfaceQueueDeviceCMDExpl(uint8_t Status, uint8_t Opcode, uint8_t Type, uint32_t Int32);
+void hostInterfaceQueueDeviceCMDExpl(uint8_t Status, uint8_t Opcode, uint8_t Type, int Int32);
 
 #endif /* INC_HOSTINTERFACE_H_ */

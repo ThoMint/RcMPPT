@@ -18,14 +18,14 @@
 /* TypeDefs ------------------------------------------------------------------*/
 typedef struct
 {
-	uint32_t WindowLength;
-	uint32_t Sum; /* Sum of filter window's elements*/
+	int WindowLength;
+	int Sum; /* Sum of filter window's elements*/
 	uint32_t WindowPointer; /* Pointer to the first element of window*/
-	uint32_t *History; /*Array to store values of filter window*/
+	int *History; /*Array to store values of filter window*/
 } FilterTypeDef;
 
 /* Function prototypes -------------------------------------------------------*/
 void Moving_Average_Init(FilterTypeDef *filter_struct, uint32_t size);
-uint32_t Moving_Average_Compute(uint32_t raw_data, FilterTypeDef *filter_struct);
+int Moving_Average_Compute(int raw_data, FilterTypeDef *filter_struct);
 
 #endif /* INC_MOVING_AVERAGE_H_ */

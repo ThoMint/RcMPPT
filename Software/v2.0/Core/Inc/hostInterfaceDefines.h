@@ -52,7 +52,7 @@ typedef struct
 	uint8_t Type;
 	union
 	{
-		uint32_t Int32;
+		int Int32;
 		uint8_t Byte[4];
 	} Value;
 } HostCommand, DeviceCommand;

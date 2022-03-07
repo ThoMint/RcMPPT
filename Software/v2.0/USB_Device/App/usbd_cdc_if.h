@@ -131,4 +131,3 @@ uint8_t USB_getTxState();
 
 #endif /* __USBD_CDC_IF_H__ */
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

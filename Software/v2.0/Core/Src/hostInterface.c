@@ -18,7 +18,7 @@ void hostInterfaceExecuteActualCommand()
 			targetVout = ActualHostCMD.Value.Int32;
 			break;
 		case OPTYPE_TARGET_OUTPUT_CURRENT:
-			targetIout = ActualHostCMD.Value.Int32;
+			limitIout = ActualHostCMD.Value.Int32;
 			break;
 		case OPTYPE_TARGET_SAMPLE_RATE:
 			targetSampleDelay = 1000000 / ActualHostCMD.Value.Int32;
@@ -28,7 +28,7 @@ void hostInterfaceExecuteActualCommand()
 	}
 }
 
-void hostInterfaceQueueDeviceCMDExpl(uint8_t Status, uint8_t Opcode, uint8_t Type, uint32_t Int32)
+void hostInterfaceQueueDeviceCMDExpl(uint8_t Status, uint8_t Opcode, uint8_t Type, int Int32)
 {
 	DeviceCommand cmd;
 	cmd.Status = Status;

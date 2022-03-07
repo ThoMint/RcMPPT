@@ -59,10 +59,13 @@ void PendSV_Handler(void);
 void SysTick_Handler(void);
 void PVD_PVM_IRQHandler(void);
 void FLASH_IRQHandler(void);
+void DMA1_Channel1_IRQHandler(void);
+void DMA1_Channel2_IRQHandler(void);
 void ADC1_2_IRQHandler(void);
 void USB_HP_IRQHandler(void);
 void USB_LP_IRQHandler(void);
-void HRTIM1_TIMF_IRQHandler(void);
+void HRTIM1_TIMA_IRQHandler(void);
+void HRTIM1_TIME_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
@@ -72,5 +75,3 @@ void HRTIM1_TIMF_IRQHandler(void);
 #endif
 
 #endif /* __STM32G4xx_IT_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

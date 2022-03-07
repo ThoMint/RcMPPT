@@ -8,4 +8,4 @@ Features:\
 -Ultra wide Vin/Vout Range 0-100V\
 -High current capability 20A\
 
-![Side View of MBA Prototype](https://github.com/ThoMint/RcMPPT/blob/master/PR/v1.0/RcMPPT-3D-Side.png)
+![Side View of MBA Prototype](https://github.com/ThoMint/RcMPPT/blob/master/PR/v2.0/RcMPPT-MBA.png)

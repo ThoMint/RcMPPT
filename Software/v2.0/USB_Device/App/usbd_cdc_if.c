@@ -395,5 +395,3 @@ uint8_t USB_getTxState()
 /**
   * @}
   */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
