@@ -76,7 +76,7 @@ void Error_Handler(void);
 
 /* Private defines -----------------------------------------------------------*/
 #define CHGPMP_PERIOD 34000
-#define PWM_PERIOD 27200
+#define PWM_PERIOD 54400
 #define DBG_LED4_Pin GPIO_PIN_13
 #define DBG_LED4_GPIO_Port GPIOC
 #define DBG_LED3_Pin GPIO_PIN_14
