@@ -15,6 +15,7 @@
 #define OPCODE_REPORT_AVERAGE_VALUE       11
 #define OPCODE_FINISHED_SAMPLE            12
 #define OPCODE_SET_SETTING                13
+#define OPCODE_REPORT_CELL_VOLTAGE        14
 
 // operation types
 #define OPTYPE_OUTPUT_VOLTAGE          1
@@ -42,7 +43,7 @@
 #define OPSTATUS_DELAYED                            128
 #define OPSTATUS_ACTIVE_COMM                        129
 
-#define DEVICE_CMD_QUEUE_SIZE 10
+#define DEVICE_CMD_QUEUE_SIZE 20
 
 // TMCL host/device command
 typedef struct

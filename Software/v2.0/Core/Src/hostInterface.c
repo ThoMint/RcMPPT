@@ -15,7 +15,7 @@ void hostInterfaceExecuteActualCommand()
 		switch (ActualHostCMD.Type)
 		{
 		case OPTYPE_TARGET_OUTPUT_VOLTAGE:
-			targetVout = ActualHostCMD.Value.Int32;
+			setTargetVout = ActualHostCMD.Value.Int32;
 			break;
 		case OPTYPE_TARGET_OUTPUT_CURRENT:
 			limitIout = ActualHostCMD.Value.Int32;

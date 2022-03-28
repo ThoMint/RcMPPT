@@ -24,6 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdlib.h"
+#include "tim.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -74,11 +75,11 @@ extern DMA_HandleTypeDef hdma_spi2_tx;
 /*           Cortex-M4 Processor Interruption and Exception Handlers          */
 /******************************************************************************/
 /**
-  * @brief This function handles Non maskable interrupt.
-  */
+ * @brief This function handles Non maskable interrupt.
+ */
 void NMI_Handler(void)
 {
-  /* USER CODE BEGIN NonMaskableInt_IRQn 0 */
+	/* USER CODE BEGIN NonMaskableInt_IRQn 0 */
 	/* Check if NMI is due to flash ECCD (error detection) */
 	if (__HAL_FLASH_GET_FLAG(FLASH_FLAG_ECCD))
 	{
@@ -119,125 +120,125 @@ void NMI_Handler(void)
 			return;
 		}
 	}
-  /* USER CODE END NonMaskableInt_IRQn 0 */
-  /* USER CODE BEGIN NonMaskableInt_IRQn 1 */
+	/* USER CODE END NonMaskableInt_IRQn 0 */
+	/* USER CODE BEGIN NonMaskableInt_IRQn 1 */
 	while (1)
 	{
 
 	}
-  /* USER CODE END NonMaskableInt_IRQn 1 */
+	/* USER CODE END NonMaskableInt_IRQn 1 */
 }
 
 /**
-  * @brief This function handles Hard fault interrupt.
-  */
+ * @brief This function handles Hard fault interrupt.
+ */
 void HardFault_Handler(void)
 {
-  /* USER CODE BEGIN HardFault_IRQn 0 */
-  /* USER CODE END HardFault_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_HardFault_IRQn 0 */
-    /* USER CODE END W1_HardFault_IRQn 0 */
-  }
+	/* USER CODE BEGIN HardFault_IRQn 0 */
+	/* USER CODE END HardFault_IRQn 0 */
+	while (1)
+	{
+		/* USER CODE BEGIN W1_HardFault_IRQn 0 */
+		/* USER CODE END W1_HardFault_IRQn 0 */
+	}
 }
 
 /**
-  * @brief This function handles Memory management fault.
-  */
+ * @brief This function handles Memory management fault.
+ */
 void MemManage_Handler(void)
 {
-  /* USER CODE BEGIN MemoryManagement_IRQn 0 */
+	/* USER CODE BEGIN MemoryManagement_IRQn 0 */
 
-  /* USER CODE END MemoryManagement_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
-    /* USER CODE END W1_MemoryManagement_IRQn 0 */
-  }
+	/* USER CODE END MemoryManagement_IRQn 0 */
+	while (1)
+	{
+		/* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */
+		/* USER CODE END W1_MemoryManagement_IRQn 0 */
+	}
 }
 
 /**
-  * @brief This function handles Prefetch fault, memory access fault.
-  */
+ * @brief This function handles Prefetch fault, memory access fault.
+ */
 void BusFault_Handler(void)
 {
-  /* USER CODE BEGIN BusFault_IRQn 0 */
+	/* USER CODE BEGIN BusFault_IRQn 0 */
 
-  /* USER CODE END BusFault_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_BusFault_IRQn 0 */
-    /* USER CODE END W1_BusFault_IRQn 0 */
-  }
+	/* USER CODE END BusFault_IRQn 0 */
+	while (1)
+	{
+		/* USER CODE BEGIN W1_BusFault_IRQn 0 */
+		/* USER CODE END W1_BusFault_IRQn 0 */
+	}
 }
 
 /**
-  * @brief This function handles Undefined instruction or illegal state.
-  */
+ * @brief This function handles Undefined instruction or illegal state.
+ */
 void UsageFault_Handler(void)
 {
-  /* USER CODE BEGIN UsageFault_IRQn 0 */
+	/* USER CODE BEGIN UsageFault_IRQn 0 */
 
-  /* USER CODE END UsageFault_IRQn 0 */
-  while (1)
-  {
-    /* USER CODE BEGIN W1_UsageFault_IRQn 0 */
-    /* USER CODE END W1_UsageFault_IRQn 0 */
-  }
+	/* USER CODE END UsageFault_IRQn 0 */
+	while (1)
+	{
+		/* USER CODE BEGIN W1_UsageFault_IRQn 0 */
+		/* USER CODE END W1_UsageFault_IRQn 0 */
+	}
 }
 
 /**
-  * @brief This function handles System service call via SWI instruction.
-  */
+ * @brief This function handles System service call via SWI instruction.
+ */
 void SVC_Handler(void)
 {
-  /* USER CODE BEGIN SVCall_IRQn 0 */
+	/* USER CODE BEGIN SVCall_IRQn 0 */
 
-  /* USER CODE END SVCall_IRQn 0 */
-  /* USER CODE BEGIN SVCall_IRQn 1 */
+	/* USER CODE END SVCall_IRQn 0 */
+	/* USER CODE BEGIN SVCall_IRQn 1 */
 
-  /* USER CODE END SVCall_IRQn 1 */
+	/* USER CODE END SVCall_IRQn 1 */
 }
 
 /**
-  * @brief This function handles Debug monitor.
-  */
+ * @brief This function handles Debug monitor.
+ */
 void DebugMon_Handler(void)
 {
-  /* USER CODE BEGIN DebugMonitor_IRQn 0 */
+	/* USER CODE BEGIN DebugMonitor_IRQn 0 */
 
-  /* USER CODE END DebugMonitor_IRQn 0 */
-  /* USER CODE BEGIN DebugMonitor_IRQn 1 */
+	/* USER CODE END DebugMonitor_IRQn 0 */
+	/* USER CODE BEGIN DebugMonitor_IRQn 1 */
 
-  /* USER CODE END DebugMonitor_IRQn 1 */
+	/* USER CODE END DebugMonitor_IRQn 1 */
 }
 
 /**
-  * @brief This function handles Pendable request for system service.
-  */
+ * @brief This function handles Pendable request for system service.
+ */
 void PendSV_Handler(void)
 {
-  /* USER CODE BEGIN PendSV_IRQn 0 */
+	/* USER CODE BEGIN PendSV_IRQn 0 */
 
-  /* USER CODE END PendSV_IRQn 0 */
-  /* USER CODE BEGIN PendSV_IRQn 1 */
+	/* USER CODE END PendSV_IRQn 0 */
+	/* USER CODE BEGIN PendSV_IRQn 1 */
 
-  /* USER CODE END PendSV_IRQn 1 */
+	/* USER CODE END PendSV_IRQn 1 */
 }
 
 /**
-  * @brief This function handles System tick timer.
-  */
+ * @brief This function handles System tick timer.
+ */
 void SysTick_Handler(void)
 {
-  /* USER CODE BEGIN SysTick_IRQn 0 */
+	/* USER CODE BEGIN SysTick_IRQn 0 */
 
-  /* USER CODE END SysTick_IRQn 0 */
-  HAL_IncTick();
-  /* USER CODE BEGIN SysTick_IRQn 1 */
+	/* USER CODE END SysTick_IRQn 0 */
+	HAL_IncTick();
+	/* USER CODE BEGIN SysTick_IRQn 1 */
 
-  /* USER CODE END SysTick_IRQn 1 */
+	/* USER CODE END SysTick_IRQn 1 */
 }
 
 /******************************************************************************/
@@ -248,72 +249,74 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles PVD/PVM1/PVM2/PVM3/PVM4 interrupts through EXTI lines 16/38/39/40/41.
-  */
+ * @brief This function handles PVD/PVM1/PVM2/PVM3/PVM4 interrupts through EXTI lines 16/38/39/40/41.
+ */
 void PVD_PVM_IRQHandler(void)
 {
-  /* USER CODE BEGIN PVD_PVM_IRQn 0 */
+	/* USER CODE BEGIN PVD_PVM_IRQn 0 */
 	while (__HAL_PWR_GET_FLAG(PWR_FLAG_PVDO) != RESET)
 	{
 
 	}
-  /* USER CODE END PVD_PVM_IRQn 0 */
-  HAL_PWREx_PVD_PVM_IRQHandler();
-  /* USER CODE BEGIN PVD_PVM_IRQn 1 */
+	/* USER CODE END PVD_PVM_IRQn 0 */
+	HAL_PWREx_PVD_PVM_IRQHandler();
+	/* USER CODE BEGIN PVD_PVM_IRQn 1 */
 
-  /* USER CODE END PVD_PVM_IRQn 1 */
+	/* USER CODE END PVD_PVM_IRQn 1 */
 }
 
 /**
-  * @brief This function handles Flash global interrupt.
-  */
+ * @brief This function handles Flash global interrupt.
+ */
 void FLASH_IRQHandler(void)
 {
-  /* USER CODE BEGIN FLASH_IRQn 0 */
+	/* USER CODE BEGIN FLASH_IRQn 0 */
 
-  /* USER CODE END FLASH_IRQn 0 */
-  HAL_FLASH_IRQHandler();
-  /* USER CODE BEGIN FLASH_IRQn 1 */
+	/* USER CODE END FLASH_IRQn 0 */
+	HAL_FLASH_IRQHandler();
+	/* USER CODE BEGIN FLASH_IRQn 1 */
 
-  /* USER CODE END FLASH_IRQn 1 */
+	/* USER CODE END FLASH_IRQn 1 */
 }
 
 /**
-  * @brief This function handles DMA1 channel1 global interrupt.
-  */
+ * @brief This function handles DMA1 channel1 global interrupt.
+ */
 void DMA1_Channel1_IRQHandler(void)
 {
-  /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
+	/* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
 
-  /* USER CODE END DMA1_Channel1_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_spi2_rx);
-  /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
+	/* USER CODE END DMA1_Channel1_IRQn 0 */
+	HAL_DMA_IRQHandler(&hdma_spi2_rx);
+	/* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
 
-  /* USER CODE END DMA1_Channel1_IRQn 1 */
+	/* USER CODE END DMA1_Channel1_IRQn 1 */
 }
 
 /**
-  * @brief This function handles DMA1 channel2 global interrupt.
-  */
+ * @brief This function handles DMA1 channel2 global interrupt.
+ */
 void DMA1_Channel2_IRQHandler(void)
 {
-  /* USER CODE BEGIN DMA1_Channel2_IRQn 0 */
+	/* USER CODE BEGIN DMA1_Channel2_IRQn 0 */
 
-  /* USER CODE END DMA1_Channel2_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_spi2_tx);
-  /* USER CODE BEGIN DMA1_Channel2_IRQn 1 */
+	/* USER CODE END DMA1_Channel2_IRQn 0 */
+	HAL_DMA_IRQHandler(&hdma_spi2_tx);
+	/* USER CODE BEGIN DMA1_Channel2_IRQn 1 */
 
-  /* USER CODE END DMA1_Channel2_IRQn 1 */
+	/* USER CODE END DMA1_Channel2_IRQn 1 */
 }
 
 /**
-  * @brief This function handles ADC1 and ADC2 global interrupt.
-  */
+ * @brief This function handles ADC1 and ADC2 global interrupt.
+ */
 void ADC1_2_IRQHandler(void)
 {
-  /* USER CODE BEGIN ADC1_2_IRQn 0 */
+	/* USER CODE BEGIN ADC1_2_IRQn 0 */
 	if (LL_ADC_IsActiveFlag_JEOS(ADC1))
 	{
+		LL_ADC_ClearFlag_JEOS(ADC1);
+
 		vinRawADC = LL_ADC_INJ_ReadConversionData32(ADC1, LL_ADC_INJ_RANK_1);
 		vinRawVolt = (vinRawADC * VDDA) / ADC_OVERSAMPLING_X4;
 		Vin = (vinRawVolt * (VIN_VDIV_RUP + VIN_VDIV_RLOW)) / VIN_VDIV_RLOW;
@@ -333,14 +336,14 @@ void ADC1_2_IRQHandler(void)
 		curOutRawVolt = ((curOutRawADC * VDDA) / ADC_OVERSAMPLING_X4) - CUROUT_VOLTAGE_REF;
 		CurOut = (curOutRawVolt * CUROUT_SHUNT_FAC) / CUROUT_AMP_FACTOR;
 		CurOutAverage = Moving_Average_Compute(CurOut, &CurOutFilter);
-
-		LL_ADC_ClearFlag_JEOS(ADC1);
 		//printf("ADC1");
 		return;
 	}
 
 	if (LL_ADC_IsActiveFlag_JEOS(ADC2))
 	{
+		LL_ADC_ClearFlag_JEOS(ADC2);
+
 		vinRawADC = LL_ADC_INJ_ReadConversionData32(ADC2, LL_ADC_INJ_RANK_1);
 		vinRawVolt = (vinRawADC * VDDA) / ADC_OVERSAMPLING_X4;
 		Vin = (vinRawVolt * (VIN_VDIV_RUP + VIN_VDIV_RLOW)) / VIN_VDIV_RLOW;
@@ -360,116 +363,135 @@ void ADC1_2_IRQHandler(void)
 		curOutRawVolt = ((curOutRawADC * VDDA) / ADC_OVERSAMPLING_X4) - CUROUT_VOLTAGE_REF;
 		CurOut = (curOutRawVolt * CUROUT_SHUNT_FAC) / CUROUT_AMP_FACTOR;
 		CurOutAverage = Moving_Average_Compute(CurOut, &CurOutFilter);
-
-		LL_ADC_ClearFlag_JEOS(ADC2);
 		//printf("ADC2");
 		return;
 	}
 
-  /* USER CODE END ADC1_2_IRQn 0 */
-  /* USER CODE BEGIN ADC1_2_IRQn 1 */
+	/* USER CODE END ADC1_2_IRQn 0 */
+	/* USER CODE BEGIN ADC1_2_IRQn 1 */
 
-  /* USER CODE END ADC1_2_IRQn 1 */
+	/* USER CODE END ADC1_2_IRQn 1 */
 }
 
 /**
-  * @brief This function handles USB high priority interrupt remap.
-  */
+ * @brief This function handles USB high priority interrupt remap.
+ */
 void USB_HP_IRQHandler(void)
 {
-  /* USER CODE BEGIN USB_HP_IRQn 0 */
+	/* USER CODE BEGIN USB_HP_IRQn 0 */
 
-  /* USER CODE END USB_HP_IRQn 0 */
-  HAL_PCD_IRQHandler(&hpcd_USB_FS);
-  /* USER CODE BEGIN USB_HP_IRQn 1 */
+	/* USER CODE END USB_HP_IRQn 0 */
+	HAL_PCD_IRQHandler(&hpcd_USB_FS);
+	/* USER CODE BEGIN USB_HP_IRQn 1 */
 
-  /* USER CODE END USB_HP_IRQn 1 */
+	/* USER CODE END USB_HP_IRQn 1 */
 }
 
 /**
-  * @brief This function handles USB low priority interrupt remap.
-  */
+ * @brief This function handles USB low priority interrupt remap.
+ */
 void USB_LP_IRQHandler(void)
 {
-  /* USER CODE BEGIN USB_LP_IRQn 0 */
+	/* USER CODE BEGIN USB_LP_IRQn 0 */
 
-  /* USER CODE END USB_LP_IRQn 0 */
-  HAL_PCD_IRQHandler(&hpcd_USB_FS);
-  /* USER CODE BEGIN USB_LP_IRQn 1 */
+	/* USER CODE END USB_LP_IRQn 0 */
+	HAL_PCD_IRQHandler(&hpcd_USB_FS);
+	/* USER CODE BEGIN USB_LP_IRQn 1 */
 
-  /* USER CODE END USB_LP_IRQn 1 */
+	/* USER CODE END USB_LP_IRQn 1 */
 }
 
 /**
-  * @brief This function handles HRTIM timer A global interrupt.
-  */
+ * @brief This function handles HRTIM timer A global interrupt.
+ */
 void HRTIM1_TIMA_IRQHandler(void)
 {
-  /* USER CODE BEGIN HRTIM1_TIMA_IRQn 0 */
+	/* USER CODE BEGIN HRTIM1_TIMA_IRQn 0 */
 	//printf("TIMA");
 	LL_HRTIM_ClearFlag_REP(HRTIM1, LL_HRTIM_TIMER_A);
 
-  /* USER CODE END HRTIM1_TIMA_IRQn 0 */
-  /* USER CODE BEGIN HRTIM1_TIMA_IRQn 1 */
+	/* USER CODE END HRTIM1_TIMA_IRQn 0 */
+	/* USER CODE BEGIN HRTIM1_TIMA_IRQn 1 */
 
-  /* USER CODE END HRTIM1_TIMA_IRQn 1 */
+	/* USER CODE END HRTIM1_TIMA_IRQn 1 */
 }
 
 /**
-  * @brief This function handles HRTIM timer E global interrupt.
-  */
+ * @brief This function handles HRTIM timer E global interrupt.
+ */
 void HRTIM1_TIME_IRQHandler(void)
 {
-  /* USER CODE BEGIN HRTIM1_TIME_IRQn 0 */
+	/* USER CODE BEGIN HRTIM1_TIME_IRQn 0 */
 	//Reset the repetition ISR flag
 	LL_HRTIM_ClearFlag_REP(HRTIM1, LL_HRTIM_TIMER_E);
 
 	//Choose Conversion Mode
-	if (targetVout > (VinAverage + buckBoostBand))
+	if (VoutAverage > (VinAverage + buckBoostBand))
 	{
 		conversionState = CONVERSION_STATE_BOOST;
 		buckBoostBand = BUCK_BOOST_BAND - BUCK_BOOST_BAND_HYSTERESIS;
 	}
-	else if (targetVout < (VinAverage - buckBoostBand))
+	else if (VoutAverage < (VinAverage - buckBoostBand))
 	{
 		conversionState = CONVERSION_STATE_BUCK;
 		buckBoostBand = BUCK_BOOST_BAND - BUCK_BOOST_BAND_HYSTERESIS;
 	}
-	else if (abs((int) (VinAverage - targetVout)) < buckBoostBand)
+	else if (abs((int) (VinAverage - VoutAverage)) < buckBoostBand)
 	{
 		conversionState = CONVERSION_STATE_BUCKBOOST;
 		buckBoostBand = BUCK_BOOST_BAND + BUCK_BOOST_BAND_HYSTERESIS;
 	}
 
-	//Limit Operating Voltage
-	if (Vin >= OVER_VOLTAGE_PROTECTION || Vout >= OVER_VOLTAGE_PROTECTION)
+	//Limit Operating Voltage and Current
+	if (Vin >= OVER_VOLTAGE_PROTECTION || Vout >= OVER_VOLTAGE_PROTECTION || (Vin <= UNDER_VOLTAGE_PROTECTION) || CurIn >= OVER_CURRENT_PROTECTION || CurOut >= OVER_CURRENT_PROTECTION)
 	{
 		conversionState = CONVERSION_STATE_SHUTDOWN;
 		CurrentDuty = 0;
 	}
 
-	//if (prevConversionState != conversionState)
+	//if ((targetVout > setTargetVout || CurOut > limitIout) && targetVout > 0)
 	//{
-	//	CurrentDuty = LOWER_DC_LIMIT_BUCKBOOST;
+	//	targetVout--;
+	//}
+	//else if (targetVout < setTargetVout)
+	//{
+	//	targetVout++;
 	//}
 
-	prevConversionState = conversionState;
+	targetVout = setTargetVout;
 
 	switch (conversionState)
 	{
 	case CONVERSION_STATE_BUCKBOOST:
-		//Activate Outputs
-		LL_HRTIM_EnableOutput(HRTIM1, LL_HRTIM_OUTPUT_TE1 | LL_HRTIM_OUTPUT_TE2 | LL_HRTIM_OUTPUT_TA1 | LL_HRTIM_OUTPUT_TA2);
+
+		if (prevConversionState != conversionState)
+		{
+			//Activate Outputs
+			LL_HRTIM_EnableOutput(HRTIM1, LL_HRTIM_OUTPUT_TE1 | LL_HRTIM_OUTPUT_TE2 | LL_HRTIM_OUTPUT_TA1 | LL_HRTIM_OUTPUT_TA2);
+			//Deactivate Buck and Boost charge pump
+			HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_4);
+			HAL_TIM_PWM_Stop(&htim20, TIM_CHANNEL_1);
+
+			//Apply conversion state offset
+			if (prevConversionState == CONVERSION_STATE_BUCK)
+			{
+				CurrentDuty -= CONVERSION_STATE_PWM_OFFSET;
+			}
+			if (prevConversionState == CONVERSION_STATE_BOOST)
+			{
+				CurrentDuty += CONVERSION_STATE_PWM_OFFSET;
+			}
+		}
 
 		//Control Algorithm
 
-		if (Vout < targetVout)
+		if ((Vout > targetVout && CurOut > 0) || CurOut > limitIout)
 		{
-			CurrentDuty += (abs((int) Vout - targetVout) / 100);
+			CurrentDuty -= 1;
 		}
-		if (Vout > targetVout)
+		else if (Vout < targetVout || CurOut < 0)
 		{
-			CurrentDuty -= (abs((int) Vout - targetVout) / 100);
+			CurrentDuty += 1;
 		}
 
 		//Constrain the duty cycle to range specific limits
@@ -496,18 +518,35 @@ void HRTIM1_TIME_IRQHandler(void)
 		break;
 
 	case CONVERSION_STATE_BUCK:
-		//Activate Outputs
-		LL_HRTIM_EnableOutput(HRTIM1, LL_HRTIM_OUTPUT_TE1 | LL_HRTIM_OUTPUT_TE2 | LL_HRTIM_OUTPUT_TA1 | LL_HRTIM_OUTPUT_TA2);
+
+		if (prevConversionState != conversionState)
+		{
+			//Activate Outputs
+			LL_HRTIM_EnableOutput(HRTIM1, LL_HRTIM_OUTPUT_TE1 | LL_HRTIM_OUTPUT_TE2 | LL_HRTIM_OUTPUT_TA1 | LL_HRTIM_OUTPUT_TA2);
+			//Activate buck charge pump, deactivate boost charge pump
+			HAL_TIM_PWM_Start(&htim20, TIM_CHANNEL_1);
+			HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_4);
+
+			//Apply conversion state offset
+			if (prevConversionState == CONVERSION_STATE_BUCKBOOST)
+			{
+				CurrentDuty += CONVERSION_STATE_PWM_OFFSET;
+			}
+			if (prevConversionState == CONVERSION_STATE_BOOST)
+			{
+				CurrentDuty += CONVERSION_STATE_PWM_OFFSET * 2;
+			}
+		}
 
 		//Control Algorithm
 
-		if (Vout < targetVout)
+		if ((Vout > targetVout && CurOut > 0) || CurOut > limitIout)
 		{
-			CurrentDuty += (abs((int) Vout - targetVout) / 100);
+			CurrentDuty -= 1;
 		}
-		if (Vout > targetVout)
+		else if (Vout < targetVout || CurOut < 0)
 		{
-			CurrentDuty -= (abs((int) Vout - targetVout) / 100);
+			CurrentDuty += 1;
 		}
 
 		//Constrain the duty cycle to range specific limits
@@ -533,17 +572,34 @@ void HRTIM1_TIME_IRQHandler(void)
 		CurrentDuty = LL_HRTIM_TIM_GetCompare1(HRTIM1, LL_HRTIM_TIMER_A);
 		break;
 	case CONVERSION_STATE_BOOST:
-		//Activate Outputs
-		LL_HRTIM_EnableOutput(HRTIM1, LL_HRTIM_OUTPUT_TE1 | LL_HRTIM_OUTPUT_TE2 | LL_HRTIM_OUTPUT_TA1 | LL_HRTIM_OUTPUT_TA2);
+
+		if (prevConversionState != conversionState)
+		{
+			//Activate Outputs
+			LL_HRTIM_EnableOutput(HRTIM1, LL_HRTIM_OUTPUT_TE1 | LL_HRTIM_OUTPUT_TE2 | LL_HRTIM_OUTPUT_TA1 | LL_HRTIM_OUTPUT_TA2);
+			//Activate Boost and deactivate Buck charge pump
+			HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
+			HAL_TIM_PWM_Stop(&htim20, TIM_CHANNEL_1);
+
+			//Apply conversion state offset
+			if (prevConversionState == CONVERSION_STATE_BUCK)
+			{
+				CurrentDuty -= CONVERSION_STATE_PWM_OFFSET * 2;
+			}
+			if (prevConversionState == CONVERSION_STATE_BUCKBOOST)
+			{
+				CurrentDuty -= CONVERSION_STATE_PWM_OFFSET;
+			}
+		}
 
 		//Control Algorithm
-		if (Vout < targetVout)
+		if ((Vout > targetVout && CurOut > 0) || CurOut > limitIout)
 		{
-			CurrentDuty += (abs((int) Vout - targetVout) / 100);
+			CurrentDuty -= 1;
 		}
-		if (Vout > targetVout)
+		else if (Vout < targetVout || CurOut < 0)
 		{
-			CurrentDuty -= (abs((int) Vout - targetVout) / 100);
+			CurrentDuty += 1;
 		}
 
 		//Constrain the duty cycle to range specific limits
@@ -557,7 +613,7 @@ void HRTIM1_TIME_IRQHandler(void)
 
 		//Timer A: PCB Location : Left  : Vin : Buck Node
 		//buck node inactive
-		LL_HRTIM_TIM_SetCompare1(HRTIM1, LL_HRTIM_TIMER_A, PWM_PERIOD+1);
+		LL_HRTIM_TIM_SetCompare1(HRTIM1, LL_HRTIM_TIMER_A, PWM_PERIOD + 1);
 
 		//Timer E Compare 2 for ADC Trigger, set to half of duty cycle to reduce noise
 		LL_HRTIM_TIM_SetCompare2(HRTIM1, LL_HRTIM_TIMER_E, CurrentDuty / 2);
@@ -571,13 +627,21 @@ void HRTIM1_TIME_IRQHandler(void)
 	case CONVERSION_STATE_SHUTDOWN:
 	default:
 		LL_HRTIM_DisableOutput(HRTIM1, LL_HRTIM_OUTPUT_TE1 | LL_HRTIM_OUTPUT_TE2 | LL_HRTIM_OUTPUT_TA1 | LL_HRTIM_OUTPUT_TA2);
+		if (prevConversionState != conversionState)
+		{
+			//Deactivate Buck and Boost charge pump
+			HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_4);
+			HAL_TIM_PWM_Stop(&htim20, TIM_CHANNEL_1);
+		}
 		break;
 	}
 
-  /* USER CODE END HRTIM1_TIME_IRQn 0 */
-  /* USER CODE BEGIN HRTIM1_TIME_IRQn 1 */
+	prevConversionState = conversionState;
 
-  /* USER CODE END HRTIM1_TIME_IRQn 1 */
+	/* USER CODE END HRTIM1_TIME_IRQn 0 */
+	/* USER CODE BEGIN HRTIM1_TIME_IRQn 1 */
+
+	/* USER CODE END HRTIM1_TIME_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

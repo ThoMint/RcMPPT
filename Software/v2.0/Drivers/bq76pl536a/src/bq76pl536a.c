@@ -197,9 +197,9 @@ static enum BQ76_status readspi(uint8_t spi_address, uint8_t reg_address, uint8_
 		return BQ76_SPI_TRANSMISSION_ERROR;
 	}
 
-	volatile uint8_t temp = 0;
+	uint8_t temp[read_length];
 
-	if (HAL_SPI_TransmitReceive(&hspi2, &temp, packet.buffer, read_length + 1, BQ76_TIMEOUT) != HAL_OK)
+	if (HAL_SPI_TransmitReceive(&hspi2, temp, packet.buffer, read_length + 1, BQ76_TIMEOUT) != HAL_OK)
 	{
 		HAL_GPIO_WritePin(BQ_NSS_GPIO_Port, BQ_NSS_Pin, GPIO_PIN_SET);
 		return BQ76_SPI_TRANSMISSION_ERROR;

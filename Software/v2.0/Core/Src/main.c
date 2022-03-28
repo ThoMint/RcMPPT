@@ -82,28 +82,28 @@ uint32_t readEEPROM32(uint32_t Index);
 /* USER CODE END 0 */
 
 /**
-  * @brief  The application entry point.
-  * @retval int
-  */
+ * @brief  The application entry point.
+ * @retval int
+ */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
+	/* USER CODE BEGIN 1 */
 	//Set initial EE-Status
 	EE_Status ee_status = EE_OK;
-  /* USER CODE END 1 */
+	/* USER CODE END 1 */
 
-  /* MCU Configuration--------------------------------------------------------*/
+	/* MCU Configuration--------------------------------------------------------*/
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+	HAL_Init();
 
-  /* USER CODE BEGIN Init */
-  /* USER CODE END Init */
+	/* USER CODE BEGIN Init */
+	/* USER CODE END Init */
 
-  /* Configure the system clock */
-  SystemClock_Config();
+	/* Configure the system clock */
+	SystemClock_Config();
 
-  /* USER CODE BEGIN SysInit */
+	/* USER CODE BEGIN SysInit */
 	LL_HRTIM_StartDLLCalibration(HRTIM1);
 	//Enable FLASH Interrupt and set NVIC Priority
 	HAL_NVIC_SetPriority(FLASH_IRQn, 0, 0);
@@ -125,26 +125,28 @@ int main(void)
 	//Set initial sample rate
 	targetSampleDelay = 10000;
 	//Set initial Target Voltage
-	targetVout = 7000;
+	setTargetVout = 10000;
+	targetVout = 0;
+	limitIout = 1000;
 	//Set initial conversion mode
 	conversionState = CONVERSION_STATE_SHUTDOWN;
 	//Set initial BuckBoost Band
 	buckBoostBand = BUCK_BOOST_BAND - BUCK_BOOST_BAND_HYSTERESIS;
-  /* USER CODE END SysInit */
+	/* USER CODE END SysInit */
 
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_HRTIM1_Init();
-  MX_CRC_Init();
-  MX_USB_Device_Init();
-  MX_TIM5_Init();
-  MX_ADC1_Init();
-  MX_ADC2_Init();
-  MX_TIM1_Init();
-  MX_TIM20_Init();
-  MX_DMA_Init();
-  MX_SPI2_Init();
-  /* USER CODE BEGIN 2 */
+	/* Initialize all configured peripherals */
+	MX_GPIO_Init();
+	MX_HRTIM1_Init();
+	MX_CRC_Init();
+	MX_USB_Device_Init();
+	MX_TIM5_Init();
+	MX_ADC1_Init();
+	MX_ADC2_Init();
+	MX_TIM1_Init();
+	MX_TIM20_Init();
+	MX_DMA_Init();
+	MX_SPI2_Init();
+	/* USER CODE BEGIN 2 */
 	LL_ADC_DisableDeepPowerDown(ADC1);
 	LL_ADC_DisableDeepPowerDown(ADC2);
 	HAL_Delay(1);	//Wait before powering up the regulator
@@ -167,10 +169,10 @@ int main(void)
 	//Enable output onto gpio pins
 	LL_HRTIM_EnableOutput(HRTIM1, LL_HRTIM_OUTPUT_TE1 | LL_HRTIM_OUTPUT_TE2 | LL_HRTIM_OUTPUT_TA1 | LL_HRTIM_OUTPUT_TA2);
 	//Init ADC Filters
-	Moving_Average_Init(&VinFilter, 80);
-	Moving_Average_Init(&VoutFilter, 80);
-	Moving_Average_Init(&CurInFilter, 80);
-	Moving_Average_Init(&CurOutFilter, 80);
+	Moving_Average_Init(&VinFilter, 40);
+	Moving_Average_Init(&VoutFilter, 40);
+	Moving_Average_Init(&CurInFilter, 40);
+	Moving_Average_Init(&CurOutFilter, 40);
 	//Enable Repetition Interrupt HRTIM
 	LL_HRTIM_EnableIT_REP(HRTIM1, LL_HRTIM_TIMER_E);
 	//Enable End of Injected Conversion Interrupt ADC
@@ -181,20 +183,14 @@ int main(void)
 	__HAL_TIM_SET_PRESCALER(&htim5, HAL_RCC_GetPCLK1Freq() / 1000000 - 1);
 	HAL_TIM_GenerateEvent(&htim5, TIM_EVENTSOURCE_UPDATE);
 
-	//Enable Charge Pump PWM Drive
-	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
-	HAL_TIM_PWM_Start(&htim20, TIM_CHANNEL_1);
-
 	__enable_irq();
 
 	//Start HRTIM Counter
 	LL_HRTIM_TIM_CounterEnable(HRTIM1, LL_HRTIM_TIMER_E | LL_HRTIM_TIMER_A);
-	//LL_HRTIM_TIM_SetCompare1(HRTIM1, LL_HRTIM_TIMER_A, PWM_PERIOD + 1);
-	//LL_HRTIM_TIM_SetCompare1(HRTIM1, LL_HRTIM_TIMER_E, 0);
-  /* USER CODE END 2 */
+	/* USER CODE END 2 */
 
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+	/* Infinite loop */
+	/* USER CODE BEGIN WHILE */
 	uint32_t nextSampleTime = 0;
 
 	if (bq76_init(&battery_monitor, 0x01, 60, MAX_VCELL, 100, MIN_VCELL, 100, 60, 60, 100) != BQ76_OK)
@@ -218,82 +214,88 @@ int main(void)
 			hostInterfaceQueueDeviceCMDExpl(OPSTATUS_OK, OPCODE_REPORT_LIVE_VALUE, OPTYPE_INPUT_CURRENT, CurInAverage);
 			hostInterfaceQueueDeviceCMDExpl(OPSTATUS_OK, OPCODE_FINISHED_SAMPLE, OPTYPE_SAMPLE_NUM_OF_CHANNELS, 4);
 
+			if (bms_present)
+			{
+				//Request Cell Voltage Conversion
+				bq76_swrqst_adc_convert(&battery_monitor);
+
+				//Read out cell voltages
+				if (bq76_read_v_cells(&battery_monitor) != BQ76_OK)
+				{
+					bms_present = 0;
+				}
+
+				hostInterfaceQueueDeviceCMDExpl(OPSTATUS_OK, OPCODE_REPORT_CELL_VOLTAGE, 0, (int)battery_monitor.v_cells[0]);
+				hostInterfaceQueueDeviceCMDExpl(OPSTATUS_OK, OPCODE_REPORT_CELL_VOLTAGE, 1, (int)battery_monitor.v_cells[1]);
+				hostInterfaceQueueDeviceCMDExpl(OPSTATUS_OK, OPCODE_REPORT_CELL_VOLTAGE, 2, (int)battery_monitor.v_cells[2]);
+				hostInterfaceQueueDeviceCMDExpl(OPSTATUS_OK, OPCODE_REPORT_CELL_VOLTAGE, 3, (int)battery_monitor.v_cells[3]);
+				hostInterfaceQueueDeviceCMDExpl(OPSTATUS_OK, OPCODE_REPORT_CELL_VOLTAGE, 4, (int)battery_monitor.v_cells[4]);
+				hostInterfaceQueueDeviceCMDExpl(OPSTATUS_OK, OPCODE_REPORT_CELL_VOLTAGE, 5, (int)battery_monitor.v_cells[5]);
+
+				//Read status of device
+				//bq76_read_alert_reg(&battery_monitor);
+				//bq76_read_cov_fault_reg(&battery_monitor);
+				//bq76_read_cuv_fault_reg(&battery_monitor);
+				//bq76_read_fault_reg(&battery_monitor);
+			}
+
 			nextSampleTime = __HAL_TIM_GET_COUNTER(&htim5) + targetSampleDelay;
 		}
 
 		//Handle Host Interface
 		hostInterfaceProcessCommand();
 
-    /* USER CODE END WHILE */
+		/* USER CODE END WHILE */
 
-    /* USER CODE BEGIN 3 */
-		if (bms_present)
-		{
-			//Request Cell Voltage Conversion
-			bq76_swrqst_adc_convert(&battery_monitor);
-			HAL_Delay(10);
-
-			//Read out cell voltages
-			if(bq76_read_v_cells(&battery_monitor)!=BQ76_OK)
-			{
-				bms_present=0;
-			}
-
-			//Read status of device
-			bq76_read_alert_reg(&battery_monitor);
-			bq76_read_cov_fault_reg(&battery_monitor);
-			bq76_read_cuv_fault_reg(&battery_monitor);
-			bq76_read_fault_reg(&battery_monitor);
-
-			bq76_set_balancing_output(&battery_monitor, 0x02);
-		}
+		/* USER CODE BEGIN 3 */
 	}
-  /* USER CODE END 3 */
+	/* USER CODE END 3 */
 }
 
 /**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+ * @brief System Clock Configuration
+ * @retval None
+ */
 void SystemClock_Config(void)
 {
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+	RCC_OscInitTypeDef RCC_OscInitStruct =
+	{ 0 };
+	RCC_ClkInitTypeDef RCC_ClkInitStruct =
+	{ 0 };
 
-  /** Configure the main internal regulator output voltage
-  */
-  HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1_BOOST);
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_HSI48;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
-  RCC_OscInitStruct.PLL.PLLN = 85;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV6;
-  RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
-  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+	/** Configure the main internal regulator output voltage
+	 */
+	HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1_BOOST);
+	/** Initializes the RCC Oscillators according to the specified parameters
+	 * in the RCC_OscInitTypeDef structure.
+	 */
+	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI | RCC_OSCILLATORTYPE_HSI48;
+	RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+	RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+	RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
+	RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+	RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+	RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV4;
+	RCC_OscInitStruct.PLL.PLLN = 85;
+	RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+	RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV6;
+	RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+	if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/** Initializes the CPU, AHB and APB buses clocks
+	 */
+	RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+	RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+	RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+	RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
-  {
-    Error_Handler();
-  }
+	if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
+	{
+		Error_Handler();
+	}
 }
 
 /* USER CODE BEGIN 4 */
@@ -482,34 +484,35 @@ uint32_t readEEPROM32(uint32_t Index)
 /* USER CODE END 4 */
 
 /**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
+ * @brief  This function is executed in case of error occurrence.
+ * @retval None
+ */
 void Error_Handler(void)
 {
-  /* USER CODE BEGIN Error_Handler_Debug */
+	/* USER CODE BEGIN Error_Handler_Debug */
 	/* User can add his own implementation to report the HAL error return state */
 	__disable_irq();
+	LL_HRTIM_DisableOutput(HRTIM1, LL_HRTIM_OUTPUT_TE1 | LL_HRTIM_OUTPUT_TE2 | LL_HRTIM_OUTPUT_TA1 | LL_HRTIM_OUTPUT_TA2);
 	while (1)
 	{
 	}
-  /* USER CODE END Error_Handler_Debug */
+	/* USER CODE END Error_Handler_Debug */
 }
 
 #ifdef  USE_FULL_ASSERT
 /**
-  * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
-  * @param  file: pointer to the source file name
-  * @param  line: assert_param error line source number
-  * @retval None
-  */
+ * @brief  Reports the name of the source file and the source line number
+ *         where the assert_param error has occurred.
+ * @param  file: pointer to the source file name
+ * @param  line: assert_param error line source number
+ * @retval None
+ */
 void assert_failed(uint8_t *file, uint32_t line)
 {
-  /* USER CODE BEGIN 6 */
+	/* USER CODE BEGIN 6 */
 	/* User can add his own implementation to report the file name and line number,
 	 ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-  /* USER CODE END 6 */
+	/* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
 

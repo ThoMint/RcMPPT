@@ -75,8 +75,9 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define CHGPMP_PERIOD 34000
-#define PWM_PERIOD 54400
+#define CHGPMP_PERIOD 8500
+#define PWM_PERIOD 36267
+#define DEAD_TIME 80
 #define DBG_LED4_Pin GPIO_PIN_13
 #define DBG_LED4_GPIO_Port GPIOC
 #define DBG_LED3_Pin GPIO_PIN_14
@@ -110,11 +111,15 @@ volatile unsigned int bms_present;
 #define CONVERSION_STATE_BUCK		1
 #define CONVERSION_STATE_BOOST		2
 #define CONVERSION_STATE_BUCKBOOST	3
-//Shutdown Power Conversion if any of the inputs/outputs exceed this limit [mV]
-#define OVER_VOLTAGE_PROTECTION		30000
+#define CONVERSION_STATE_PWM_OFFSET 10000
+//Shutdown Power Conversion if any of the inputs/outputs exceed these limits [mV] [mA]
+#define OVER_VOLTAGE_PROTECTION			30000
+#define UNDER_VOLTAGE_PROTECTION		5000
+#define OVER_CURRENT_PROTECTION			10000
+#define REVERSE_CURRENT_PROTECTION	-100
 //BUCK-BOOST Conversion Mode Band [mV]
-#define BUCK_BOOST_BAND 								2000
-#define BUCK_BOOST_BAND_HYSTERESIS 			400
+#define BUCK_BOOST_BAND 								3000
+#define BUCK_BOOST_BAND_HYSTERESIS 			800
 //Analog Supply Voltage [mV]
 #define VDDA						3300
 //Oversampling correction factor
@@ -165,6 +170,8 @@ FilterTypeDef CurOutFilter;
 #define CUROUT_VOLTAGE_REF 	340		//340mV Shunt Amplifier Offset
 
 
+//Set target Output Voltage [mV] (CV)
+volatile unsigned int setTargetVout;
 //Target Output Voltage [mV] (CV)
 volatile unsigned int targetVout;
 //Target Output Voltage [mA] (CC)
